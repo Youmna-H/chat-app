@@ -7,7 +7,9 @@ const messages = [];
 const users = [];
 
 const topics =  {"money": {"topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"},
-"empire":{"topic":"British Empire","text":"Is it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight."}};
+"empire":{"topic":"British Empire","text":"Is it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight."},
+"drugs":{"topic":"","text":"All drugs should be legalised."}};
+
 var currentTopic = {"id":"money","topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"};
 //topic and topictext
 //graphql needs typedefs
@@ -55,7 +57,8 @@ const typeDefs = `
       num_responses: Int,
       classify: Int,
       utt: String,
-      dataset: String
+      dataset: String,
+      data_type: String
       ): [WozResponse!]
   }
 
@@ -84,15 +87,19 @@ const resolvers = {
   // DateTime: DateTimeResolver,
   Query: {
     messages: () => messages,
-    wozCandidateResponses: (parent, {usermessage, model, num_responses, classify, utt, dataset}) => {
+    wozCandidateResponses: (parent, {usermessage, model, num_responses, classify, utt, dataset, data_type}) => {
       if (num_responses <= 0)
       {
         return [];
       }
       wozCanndidateResponses = [];
-      const python = spawnSync('python3', ['python/read_json.py', '-q', usermessage, '-m', model, '-n', 
-      num_responses, "--responses_per_stance", classify, "-u", utt === 'locution' ? "l" : "i", "-d", dataset]);
-    //   const python =  execSync('python3 python/read_json.py -q "hi"', function(error, stdout, stderr) {
+      const python = data_type === "moralmaze" ?
+      spawnSync('python3', ['python/read_json.py', '-q', usermessage, '-m', model, '-n', 
+      num_responses, "--responses_per_stance", classify, "-u", utt === 'locution' ? "l" : "i", "-d", dataset])
+      : 
+      spawnSync('python3', ['python/kialo.py', '-q', usermessage, '-m', model, '-n', 
+      num_responses, "--responses_per_stance", classify, "-d", dataset]);
+    //   const python = execSync('python3 python/kialo.py -q "hi"', function(error, stdout, stderr) {
     //     console.log(stdout);
     //     console.log(error);
     //     console.log(stderr);
@@ -103,7 +110,7 @@ const resolvers = {
       var responses = [];
       //this is how the responses are splitted in python "###///"
       //delimeter between responses and stances is "$!$!$"
-      if (classify == 1)
+      if (classify === 1 && data_type === 'moralmaze')
       {
         var responses_all = dataToSend.trim().split("$!$!$");
         var responses_pro = responses_all[0].split("###///");

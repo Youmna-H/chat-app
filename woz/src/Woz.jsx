@@ -52,9 +52,9 @@ const GET_MESSAGES = gql`
 
 const GET_RESPONSE = gql`
     query GetResponse($usermessage: String!, $model:String, $num_responses:Int, $classify: Int,
-         $utt: String, $dataset: String) {
+         $utt: String, $dataset: String, $data_type: String) {
     wozCandidateResponses(usermessage: $usermessage, model: $model, num_responses: $num_responses,
-         classify: $classify, utt: $utt, dataset: $dataset)
+         classify: $classify, utt: $utt, dataset: $dataset, data_type: $data_type)
       {
         relevance,
         content,
@@ -79,11 +79,11 @@ const GET_TOPIC = gql`
 `;
 
 
-const CandidateResponseContainer = ({ usermessage, model, num_responses, classify, utt, dataset }) => {
+const CandidateResponseContainer = ({ usermessage, model, num_responses, classify, utt, dataset, data_type }) => {
     const { loading, error, data } = useQuery(GET_RESPONSE, {
         variables: {
             usermessage: usermessage, model: model, num_responses: parseInt(num_responses),
-            classify: classify === true ? 1 : 0, utt: utt, dataset: dataset
+            classify: classify === true ? 1 : 0, utt: utt, dataset: dataset, data_type: data_type
         },
     });
     if (loading) return <div>Loading...</div>;
@@ -129,7 +129,7 @@ const CandidateResponseContainer = ({ usermessage, model, num_responses, classif
         </ol>);
     }
 }
-const CandidateResponse = ({ model, num_responses, classify, utt, dataset }) => {
+const CandidateResponse = ({ model, num_responses, classify, utt, dataset, data_type }) => {
     const { data } = useSubscription(GET_MESSAGES);
     if (!data) {
         return <div />;
@@ -148,22 +148,22 @@ const CandidateResponse = ({ model, num_responses, classify, utt, dataset }) => 
         <Container>
             <h4>Suggested Responses</h4>
             <CandidateResponseContainer usermessage={lastMessage.content} model={model} num_responses={num_responses}
-             classify={classify} utt={utt} dataset={dataset} />
+                classify={classify} utt={utt} dataset={dataset} data_type={data_type} />
         </Container>
     )
 }
 
-
 const Woz = () => {
     var prev_num_responses = 5;
     const { data } = useSubscription(GET_TOPIC);
-    
+
     const [state, setState] = useState({
         model: "tfidf",
         checked: false,
         num_responses: 5,
         classify: true,
         utt: "proposition",
+        data_type: "moralmaze",
         dataset: "money",
         errors: {}
     });
@@ -172,10 +172,25 @@ const Woz = () => {
 
     const [selectTopic] = useMutation(SELECT_TOPIC);
 
+    const selectData = (evt) => {
+        const dataset = evt.target.value === "moralmaze" ? "money" : "drugs";
+        setState(
+            {
+                ...state,
+                data_type: evt.target.value,
+                dataset: dataset
+            }
+        );
+        selectTopic({
+            variables: { "id": dataset },
+        });
+
+    };
+
     const selectDataset = (evt) => {
         selectTopic({
-            variables: {"id":evt.target.value},
-          });
+            variables: { "id": evt.target.value },
+        });
         setState(
             {
                 ...state,
@@ -280,19 +295,39 @@ const Woz = () => {
                                     <h4 style={{ marginTop: "10px" }}>Parameters:</h4>
                                     {/* <Row> */}
                                     <Row className="wozClass">
-                                        <Col xs={2} style={{ marginTop: "auto", marginBottom: "auto" }}>
-                                            <label >Dataset:</label>
+                                        <Col xs={1} style={{ marginTop: "auto", marginBottom: "auto" }}>
+                                            <label >Data:</label>
                                         </Col>
-                                        <Col xs={3} style={{ marginTop: "auto", marginBottom: "auto"}}>
-                                            <FormSelect id="topicselection" value={state.dataset} onChange={val => selectDataset(val)}>
-                                                <option className="money" value="money">MoneyMorality</option>
-                                                <option className="empire" value="empire" >BritishEmpire</option>
+                                        <Col xs={2} style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "-10px" }}>
+                                            <FormSelect id="topicselection" value={state.data_type} onChange={val => selectData(val)}>
+                                                <option className="moralmaze" value="moralmaze">Moral Maze</option>
+                                                <option className="kialo" value="kialo">Kialo</option>
                                             </FormSelect>
                                         </Col>
-                                        <Col xs={2} style={{ marginTop: "auto", marginBottom: "auto" }}>
+                                        <Col xs={2} style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "-5px" }}>
+                                            <label >Dataset:</label>
+                                        </Col>
+                                        <Col xs={3} style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "-40px" }}>
+                                            <FormSelect id="topicselection" value={state.dataset} onChange={val => selectDataset(val)}>
+                                                {state.data_type === "moralmaze" ?
+                                                    (
+                                                        <>
+                                                        <option className="money" value="money">MoneyMorality</option>
+                                                        <option className="empire" value="empire" >BritishEmpire</option>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                        <option className="drugs" value="drugs">Drugs</option>
+                                                        </>
+                                                    )
+                                                }
+                                            </FormSelect>
+                                            {/* <Dataset data_type={state.data_type} dataset={state.dataset} /> */}
+                                        </Col>
+                                        <Col xs={2} style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "-10px" }}>
                                             <label >Model:</label>
                                         </Col>
-                                        <Col xs={4} style={{ marginLeft: "-15px" }}>
+                                        <Col xs={3} style={{ marginLeft: "-50px" }}>
                                             <FormSelect value={state.model} onChange={val => selectModel(val)}>
                                                 <option value="tfidf">TF-IDF</option>
                                                 <option value="word2vec" >Word2Vec</option>
@@ -302,11 +337,11 @@ const Woz = () => {
                                         <Col xs={3} style={{ marginTop: "15px", marginBottom: "auto" }}>
                                             <label >#Responses:</label>
                                         </Col>
-                                        <Col xs={2} style={{ marginTop: "15px", marginBottom: "auto", marginLeft: "-5px" }}>
+                                        <Col xs={2} style={{ marginTop: "15px", marginBottom: "auto", marginLeft: "-65px" }}>
                                             <input value={state.num_responses} size="2" style={{ height: "30" }} onChange={val => verifyNumber(val)} onBlur={val => verifyEmpty(val)} />
                                             <span style={{ color: "red" }}>{state.errors["number"]}</span>
                                         </Col>
-                                        <Col xs={6} style={{ marginTop: "15px", marginBottom: "auto" }}>
+                                        <Col xs={6} style={{ marginTop: "15px", marginBottom: "auto", marginLeft: "-40px" }}>
                                             <FormCheckbox checked={state.classify} onChange={val => classify(val)}>
                                                 Classify Responses
                                                 </FormCheckbox>
@@ -314,7 +349,7 @@ const Woz = () => {
                                         <Col xs={5} style={{ marginTop: "5px", marginBottom: "auto" }}>
                                             <label >Response Type:</label>
                                         </Col>
-                                        <Col xs={13} style={{ marginTop: "10px", marginBottom: "auto", marginLeft: "-35px" }}>
+                                        <Col xs={13} style={{ marginTop: "10px", marginBottom: "auto", marginLeft: "-130px" }}>
                                             <FormRadio
                                                 name="utt"
                                                 checked={state.utt === "locution"}
@@ -343,7 +378,7 @@ const Woz = () => {
                                     </Row>
                                     <Row>
                                         {state.checked ? <CandidateResponse model={state.model} num_responses={state.num_responses}
-                                         classify={state.classify} utt={state.utt} dataset={state.dataset} /> : <div />}
+                                            classify={state.classify} utt={state.utt} dataset={state.dataset} data_type={state.data_type} /> : <div />}
                                     </Row>
                                     {/* </Row> */}
                                 </Col>
