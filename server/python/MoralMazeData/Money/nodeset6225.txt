@@ -1,0 +1,4 @@
+<span class="highlighted" id="node1">Michael Portillo, are you a saver
+or a debtor?</span> <span class="highlighted" id="node3">And is there a moral distinction between the two? </span>
+
+Michael Portillo:

@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="highlighted" id="node1">I've got in front of me a letter from a
+credit card company</span>. <span class="highlighted" id="node7">There are two figures on this letter which really stand
+out: 0% per annum new balance transfers, 0% per annum new money transfers</span>. 
+
+<span class="highlighted" id="node16">Now, underneath that, in small print,
+it becomes absolutely clear that youâ€™ll be paying all sorts of charges</span>. <span class="highlighted" id="node25">And
+then very, very quickly youâ€™ll be lured into paying a very large charge</span>. 
+
+<span class="highlighted" id="node40">Do you think itâ€™s responsible to
+encourage people to mis-read something like that?</span>
+
