@@ -1,5 +1,5 @@
 # chat-app
-This is a chat application between the wizard of oz and a participant!
+This is a chat application between the wizard of oz and a participant! This project is based on the GitHub project https://github.com/jherr/chat-o-matic
 
 Before running the code, install the dependecies by running the following command in the folders: server, client, woz and participant:
 ```sh
