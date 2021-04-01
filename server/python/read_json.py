@@ -65,13 +65,13 @@ if __name__ == "__main__":
 	# pre_path = ""
 	args = parser.parse_args()
 	data_path = pre_path + 'MoralMazeData/Money'
-	bert_path  =  pre_path  + 'MoralMazeData/sbert_vecs_money.pkl'
+	bert_path  =  pre_path  + 'MoralMazeData/sbert/sbert_vecs_money.pkl'
 	# data_path = os.path.abspath('MoralMazeData/Money')
 	utt_to_stance_path = pre_path + 'MoralMazeData/money_utt_stances.txt'
 	if args.dataset == "empire":
 		data_path = pre_path + 'MoralMazeData/britishempire'
 		utt_to_stance_path = pre_path + 'MoralMazeData/british_empire_utt_stances.txt'
-		bert_path  =  pre_path  + 'MoralMazeData/sbert_vecs_britishempire.pkl'
+		bert_path  =  pre_path  + 'MoralMazeData/sbert/sbert_vecs_britishempire.pkl'
 
 	with open(utt_to_stance_path) as f:
 		for line in f:
