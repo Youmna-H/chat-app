@@ -332,6 +332,7 @@ const Woz = () => {
                                                 <option value="tfidf">TF-IDF</option>
                                                 <option value="word2vec" >Word2Vec</option>
                                                 <option value="glove">GloVe</option>
+                                                <option value="sbert">SBERT</option>
                                             </FormSelect>
                                         </Col>
                                         <Col xs={3} style={{ marginTop: "15px", marginBottom: "auto" }}>

@@ -4,7 +4,7 @@ import os
 import gensim
 import utils
 from nltk.tokenize import word_tokenize
-
+from six.moves import cPickle
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -35,6 +35,7 @@ def read_data_from_file(file, node_type):
 				continue
 			node['map'] = map_name
 			node['to_texts'] = []
+			node['text'] = node['text'].strip() #cleanup
 			node['stance'] = utt_to_stance[node['text'].strip()]
 			text_to_stance_lower[node['text'].strip().lower()] = utt_to_stance[node['text'].strip()]
 			nodes[node['nodeID']+'_'+map_name] = node #add +file in case id is duplicated across maps
@@ -52,7 +53,7 @@ if __name__ == "__main__":
 	parser.add_argument("-d", "--dataset", dest="dataset", type=str, choices=["money", "empire"], required=False, default="money", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	# parser.add_argument("-p", "--data_path", dest="data_path", type=str, required=False, default="/Users/youmna/Documents/OUM2021/MoralMazeData/Money", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-u", "--utt_type", dest="utt_type", choices=['i', 'l'], type=str, required=False, default="i", help="The type of utterance, i for propositions and l for locutions") #default is false in case of loading a pretrained model, and just testing on test set
-	parser.add_argument("-m", "--sim_model", dest="sim_model", choices=['word2vec', 'glove', 'tfidf'], type=str, required=False, default="tfidf", help="The similarity model") #default is false in case of loading a pretrained model, and just testing on test set
+	parser.add_argument("-m", "--sim_model", dest="sim_model", choices=['word2vec', 'glove', 'tfidf', 'sbert'], type=str, required=False, default="tfidf", help="The similarity model") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-q", "--query", dest="query", type=str, required=True, default="", help="User's query") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-n", "--num_responses", dest="num_responses", type=int, required=False, default=5, help="Number of similar responses to retrieve") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-rp", "--responses_per_stance", dest="responses_per_stance", choices = [0,1], type=int, required=False, default=1, help="Set to true if you want the number of responses to be per stance") #default is false in case of loading a pretrained model, and just testing on test set
@@ -64,11 +65,13 @@ if __name__ == "__main__":
 	# pre_path = ""
 	args = parser.parse_args()
 	data_path = pre_path + 'MoralMazeData/Money'
+	bert_path  =  pre_path  + 'MoralMazeData/sbert_vecs_money.pkl'
 	# data_path = os.path.abspath('MoralMazeData/Money')
-	utt_to_stance_path = pre_path + 'money_utt_stances.txt'
+	utt_to_stance_path = pre_path + 'MoralMazeData/money_utt_stances.txt'
 	if args.dataset == "empire":
 		data_path = pre_path + 'MoralMazeData/britishempire'
-		utt_to_stance_path = pre_path + 'british_empire_utt_stances.txt'
+		utt_to_stance_path = pre_path + 'MoralMazeData/british_empire_utt_stances.txt'
+		bert_path  =  pre_path  + 'MoralMazeData/sbert_vecs_britishempire.pkl'
 
 	with open(utt_to_stance_path) as f:
 		for line in f:
@@ -151,7 +154,23 @@ if __name__ == "__main__":
 	# print('Query: ')
 	# print(text)
 	# print('-------------')
-	if args.sim_model == 'word2vec':
+	if args.sim_model == 'sbert':
+		infile = open(bert_path,'rb')
+		vectors_all = cPickle.load(infile)
+		infile.close()
+		if text not in vectors_all:
+			vectors_all[text] = utils.get_sbert_vec(text)
+		if args.responses_per_stance == 0:
+			vectors = { d: vectors_all[d] for d in prop_content_texts }
+			most_similar = utils.most_sim_cos(vectors, text, args.num_responses)
+		else:
+			vectors_pro = { d: vectors_all[d] for d in prop_content_texts_pro }
+			most_similar_pro = utils.most_sim_cos(vectors_pro, text, args.num_responses)
+			vectors_con = { d: vectors_all[d] for d in prop_content_texts_con }
+			most_similar_con = utils.most_sim_cos(vectors_con, text, args.num_responses)
+			vectors_neutral = { d: vectors_all[d] for d in prop_content_texts_neutral }
+			most_similar_neutral = utils.most_sim_cos(vectors_neutral, text, args.num_responses)
+	elif args.sim_model == 'word2vec':
 		path = pre_path + "embeddings/GoogleNews-vectors-negative300.bin"
 		model = gensim.models.KeyedVectors.load_word2vec_format(path, binary=True)
 		

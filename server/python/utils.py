@@ -7,6 +7,13 @@ import numpy as np
 unk_words = {}
 vectors = {}
 
+def get_sbert_vec(text):
+	#get sbert vec https://www.sbert.net/
+	from sentence_transformers import SentenceTransformer
+	model = SentenceTransformer('paraphrase-distilroberta-base-v1')
+	embedding = model.encode(text)
+	return embedding
+
 def read_emb_text(emb_path):
 	embeddings = {}
 	with open(emb_path, 'r') as f:

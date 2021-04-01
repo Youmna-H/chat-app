@@ -99,12 +99,13 @@ const resolvers = {
       : 
       spawnSync('python3', ['python/kialo.py', '-q', usermessage, '-m', model, '-n', 
       num_responses, "--responses_per_stance", classify, "-d", dataset]);
-    //   const python = execSync('python3 python/kialo.py -q "hi"', function(error, stdout, stderr) {
+    //   const python = execSync('python3 python/kialo.py -q "hi" -m sbert', function(error, stdout, stderr) {
     //     console.log(stdout);
     //     console.log(error);
     //     console.log(stderr);
     // });
       // collect data from script
+
       var dataToSend = python.stdout.toString();
       var stances =  [];
       var responses = [];
