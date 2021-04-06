@@ -52,9 +52,9 @@ const GET_MESSAGES = gql`
 
 const GET_RESPONSE = gql`
     query GetResponse($usermessage: String!, $model:String, $num_responses:Int, $classify: Int,
-         $utt: String, $dataset: String, $data_type: String) {
+         $utt: String, $dataset: String, $data_type: String, $response: String) {
     wozCandidateResponses(usermessage: $usermessage, model: $model, num_responses: $num_responses,
-         classify: $classify, utt: $utt, dataset: $dataset, data_type: $data_type)
+         classify: $classify, utt: $utt, dataset: $dataset, data_type: $data_type, response: $response)
       {
         relevance,
         content,
@@ -79,11 +79,11 @@ const GET_TOPIC = gql`
 `;
 
 
-const CandidateResponseContainer = ({ usermessage, model, num_responses, classify, utt, dataset, data_type }) => {
+const CandidateResponseContainer = ({ usermessage, model, num_responses, classify, utt, dataset, data_type, response }) => {
     const { loading, error, data } = useQuery(GET_RESPONSE, {
         variables: {
             usermessage: usermessage, model: model, num_responses: parseInt(num_responses),
-            classify: classify === true ? 1 : 0, utt: utt, dataset: dataset, data_type: data_type
+            classify: classify === true ? 1 : 0, utt: utt, dataset: dataset, data_type: data_type, response: response
         },
     });
     if (loading) return <div>Loading...</div>;
@@ -129,7 +129,7 @@ const CandidateResponseContainer = ({ usermessage, model, num_responses, classif
         </ol>);
     }
 }
-const CandidateResponse = ({ model, num_responses, classify, utt, dataset, data_type }) => {
+const CandidateResponse = ({ model, num_responses, classify, utt, dataset, data_type, response }) => {
     const { data } = useSubscription(GET_MESSAGES);
     if (!data) {
         return <div />;
@@ -148,7 +148,7 @@ const CandidateResponse = ({ model, num_responses, classify, utt, dataset, data_
         <Container>
             <h4>Suggested Responses</h4>
             <CandidateResponseContainer usermessage={lastMessage.content} model={model} num_responses={num_responses}
-                classify={classify} utt={utt} dataset={dataset} data_type={data_type} />
+                classify={classify} utt={utt} dataset={dataset} data_type={data_type} response={response} />
         </Container>
     )
 }
@@ -165,6 +165,7 @@ const Woz = () => {
         utt: "proposition",
         data_type: "moralmaze",
         dataset: "money",
+        response: "arg",
         errors: {}
     });
 
@@ -220,6 +221,14 @@ const Woz = () => {
             {
                 ...state,
                 utt: value
+            }
+        );
+    };
+    const selectResponse = (value) => {
+        setState(
+            {
+                ...state,
+                response: value
             }
         );
     };
@@ -366,6 +375,25 @@ const Woz = () => {
                                                 Proposition
                                                 </FormRadio>
                                         </Col>
+                                        <Col xs={2} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "10px"}}>
+                                            <label >Retrieve:</label>
+                                        </Col>
+                                        <Col xs={5} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "-30px"}}>
+                                            <FormRadio
+                                                name="response"
+                                                checked={state.response === "arg"}
+                                                onChange={val => selectResponse("arg")}
+                                            >
+                                                Most similar argument
+                                                </FormRadio>
+                                            <FormRadio
+                                                name="response"
+                                                checked={state.response === "arg_response"}
+                                                onChange={val => selectResponse("arg_response")}
+                                            >
+                                                Response to most similar argument
+                                                </FormRadio>
+                                        </Col>
                                     </Row>
                                     <Row>
                                         <Col>
@@ -379,7 +407,7 @@ const Woz = () => {
                                     </Row>
                                     <Row>
                                         {state.checked ? <CandidateResponse model={state.model} num_responses={state.num_responses}
-                                            classify={state.classify} utt={state.utt} dataset={state.dataset} data_type={state.data_type} /> : <div />}
+                                            classify={state.classify} utt={state.utt} dataset={state.dataset} data_type={state.data_type} response={state.response} /> : <div />}
                                     </Row>
                                     {/* </Row> */}
                                 </Col>

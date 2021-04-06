@@ -46,7 +46,7 @@ if __name__ == "__main__":
 	parser.add_argument("-q", "--query", dest="query", type=str, required=True, default="", help="User's query") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-n", "--num_responses", dest="num_responses", type=int, required=False, default=5, help="Number of similar responses to retrieve") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-rp", "--responses_per_stance", dest="responses_per_stance", choices = [0,1], type=int, required=False, default=1, help="Set to 1 if you want the number of responses to be per stance") #default is false in case of loading a pretrained model, and just testing on test set
-	parser.add_argument("-rr", "--responses_to_response", dest="responses_to_response", choices = [0,1], type=int, required=False, default=0, help="Set to 1 if  we want to retrieve the response to the most similar utterance") #default is false in case of loading a pretrained model, and just testing on test set
+	parser.add_argument("-rr", "--responses_to_response", dest="responses_to_response", choices = ["arg","arg_response"], type=str, required=False, default="arg", help="Set to arg_response if  we want to retrieve the response to the most similar utterance") #default is false in case of loading a pretrained model, and just testing on test set
 
 	args = parser.parse_args()
 	data_path = ""
@@ -88,6 +88,8 @@ if __name__ == "__main__":
 				initial_claim = id_to_claim[initial_claim_id]
 				responses_to_claims[initial_claim].append({"stance":parts[1].lower()[:-1],"text":text})
 	texts.append(query_text)
+	# print(responses_to_claims)
+	# print("##########")
 	# print(np.max(lens))
 	# print(np.mean(lens))
 
@@ -112,6 +114,14 @@ if __name__ == "__main__":
 		most_similar = utils.most_sim_cos(vectors, query_text, args.num_responses)
 	elif args.sim_model == 'tfidf':
 		most_similar = utils.get_tfidf_sim(texts, args.num_responses, query_text)
+
+	most_similar_response = []
+	if args.responses_to_response == "arg_response":
+		for claim in most_similar:
+			if claim in responses_to_claims:
+				for response in responses_to_claims[claim]:
+					most_similar_response.append(response["text"])
+		most_similar = most_similar_response[-args.num_responses:]
 
 	most_similar.reverse()
 	stances = ["neutral"]*args.num_responses

@@ -58,7 +58,8 @@ const typeDefs = `
       classify: Int,
       utt: String,
       dataset: String,
-      data_type: String
+      data_type: String,
+      response: String
       ): [WozResponse!]
   }
 
@@ -87,7 +88,7 @@ const resolvers = {
   // DateTime: DateTimeResolver,
   Query: {
     messages: () => messages,
-    wozCandidateResponses: (parent, {usermessage, model, num_responses, classify, utt, dataset, data_type}) => {
+    wozCandidateResponses: (parent, {usermessage, model, num_responses, classify, utt, dataset, data_type, response}) => {
       if (num_responses <= 0)
       {
         return [];
@@ -98,8 +99,19 @@ const resolvers = {
       num_responses, "--responses_per_stance", classify, "-u", utt === 'locution' ? "l" : "i", "-d", dataset])
       : 
       spawnSync('python3', ['python/kialo.py', '-q', usermessage, '-m', model, '-n', 
-      num_responses, "--responses_per_stance", classify, "-d", dataset]);
-    //   const python = execSync('python3 python/kialo.py -q "hi" -m sbert', function(error, stdout, stderr) {
+      num_responses, "--responses_per_stance", classify, "-d", dataset, '-rr', response]);
+
+    //   try {
+    //     const python = 'python3 python/kialo.py -q "hi" -m sbert -rr arg_response';
+    //     execSync(python).toString();
+    //  } catch (error) {
+    //     console.log(error.status);  // 0 : successful exit, but here in exception it has to be greater than 0
+    //     console.log(error.message); // Holds the message you typically want.
+    //     console.log(error.stderr);  // Holds the stderr output. Use `.toString()`.
+    //     console.log(error.stdout);  // Holds the stdout output. Use `.toString()`.
+    //  }
+
+    //   execSync('python3 python/kialo.py -q "hi" -m sbert -rr arg_response', function(error, stdout, stderr) {
     //     console.log(stdout);
     //     console.log(error);
     //     console.log(stderr);
