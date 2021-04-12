@@ -18,6 +18,8 @@ np.random.seed(123)
 # Witnesses: Nick Dearden, Simon Rose, John Lamiday and Jamie Whyte. 
 utt_to_stance = {}
 text_to_stance_lower = {}
+lowercase_to_uppercase = {}
+text_to_response = {}
 topic = {"money": "Morality of Money:\tBut the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight",
 "empire":"British Empire:\tIs it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight."
 }
@@ -38,6 +40,8 @@ def read_data_from_file(file, node_type):
 			node['text'] = node['text'].strip() #cleanup
 			node['stance'] = utt_to_stance[node['text'].strip()]
 			text_to_stance_lower[node['text'].strip().lower()] = utt_to_stance[node['text'].strip()]
+			lowercase_to_uppercase[node['text'].strip().lower()] = node['text'].strip()
+			text_to_response[node['text'].strip().lower()] = []
 			nodes[node['nodeID']+'_'+map_name] = node #add +file in case id is duplicated across maps
 			# if node['text'].lower() in text_to_id:
 			# 	print(node['text'])
@@ -50,6 +54,7 @@ def read_data_from_file(file, node_type):
 #note that same nodes "nodeID" are repeated in different files, as they map to the same node
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
+	parser.add_argument("-pre", "--pre_path", dest="pre_path", type=str, required=False, default="", help="Need to set to python/ when running from the server") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-d", "--dataset", dest="dataset", type=str, choices=["money", "empire"], required=False, default="money", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	# parser.add_argument("-p", "--data_path", dest="data_path", type=str, required=False, default="/Users/youmna/Documents/OUM2021/MoralMazeData/Money", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-u", "--utt_type", dest="utt_type", choices=['i', 'l'], type=str, required=False, default="i", help="The type of utterance, i for propositions and l for locutions") #default is false in case of loading a pretrained model, and just testing on test set
@@ -57,21 +62,30 @@ if __name__ == "__main__":
 	parser.add_argument("-q", "--query", dest="query", type=str, required=True, default="", help="User's query") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-n", "--num_responses", dest="num_responses", type=int, required=False, default=5, help="Number of similar responses to retrieve") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-rp", "--responses_per_stance", dest="responses_per_stance", choices = [0,1], type=int, required=False, default=1, help="Set to true if you want the number of responses to be per stance") #default is false in case of loading a pretrained model, and just testing on test set
+	parser.add_argument("-rr", "--responses_to_response", dest="responses_to_response", choices = ["arg","arg_response"], type=str, required=False, default="arg", help="Set to arg_response if you want to return the responses to the retrieved most similar utterances") #default is false in case of loading a pretrained model, and just testing on test set
 
 	# parser.add_argument("-rs", "--remove_stop", dest="remove_stopwords", type=bool, required=False, default=False, help="Whether to remove stop words in similarity models") #default is false in case of loading a pretrained model, and just testing on test set
 
 	# parser.add_argument("-m", "--sim_measure", dest="sim_measure", choices=['utterance', 'response'], type=str, required=False, default="utterance", help="return most similar sentence or most the response to the similar sentence") #default is false in case of loading a pretrained model, and just testing on test set
-	pre_path = "python/"
-	# pre_path = ""
+	
 	args = parser.parse_args()
-	data_path = pre_path + 'MoralMazeData/Money'
-	bert_path  =  pre_path  + 'MoralMazeData/sbert/sbert_vecs_money.pkl'
-	# data_path = os.path.abspath('MoralMazeData/Money')
-	utt_to_stance_path = pre_path + 'MoralMazeData/money_utt_stances.txt'
-	if args.dataset == "empire":
-		data_path = pre_path + 'MoralMazeData/britishempire'
-		utt_to_stance_path = pre_path + 'MoralMazeData/british_empire_utt_stances.txt'
-		bert_path  =  pre_path  + 'MoralMazeData/sbert/sbert_vecs_britishempire.pkl'
+	pre_path =  args.pre_path 
+	config_path = "mm_config.json"
+	data_path = ""
+	bert_path  =  ""
+	utt_to_stance_path = ""
+	config_path = pre_path + config_path
+
+	with open(config_path) as f:
+		config = json.load(f)
+		for c in config["topics"]:
+			if args.dataset == c["id"]:
+				data_path = pre_path + c["data_path"]
+				utt_to_stance_path = pre_path + c["utt_to_stance_path"]
+				bert_path  =  pre_path  + c["sbert_path"]
+	
+	if data_path == "":
+		print("Incorrect topic!!!!")
 
 	with open(utt_to_stance_path) as f:
 		for line in f:
@@ -117,7 +131,7 @@ if __name__ == "__main__":
 	for key in edges:
 		edge = edges[key]
 		node_id = edge['fromID']+'_'+key.split('_')[1]
-		if node_id not in nodes:
+		if node_id not in nodes: #node_id is id_argmap
 			continue
 		node = nodes[node_id]
 		if node['type'].lower() != args.utt_type.lower():
@@ -132,8 +146,10 @@ if __name__ == "__main__":
 				to_node = nodes[to_node_id2]
 				if to_node['text'] == 'TA' or to_node['text'] == 'YA':
 					node['to_texts'].append(to_node['text'].lower())
+					text_to_response[node['text'].lower()].append(to_node['text'].lower())
 				else:
 					node['to_texts'].insert(0,to_node['text'].lower())
+					text_to_response[node['text'].lower()].insert(0,to_node['text'].lower())
 
 	
 	most_similar = []
@@ -220,6 +236,14 @@ if __name__ == "__main__":
 		# 		max_sim = sim
 		# 		most_similar = prop_content_texts[i]
 	if args.responses_per_stance == 0:
+		most_similar_response = []
+		if args.responses_to_response == "arg_response":
+			for claim in most_similar:
+				if claim in text_to_response:
+					for response in text_to_response[claim]:
+						most_similar_response.append(response)
+			most_similar = most_similar_response[-args.num_responses:]
+
 		most_similar.reverse()
 		_id = [text_to_id[i] for i in most_similar]
 		stances = [text_to_stance_lower[i] for i in most_similar]
@@ -230,8 +254,29 @@ if __name__ == "__main__":
 		# print("Responses to the most similar sentence to query (including all types of transitions):")
 		# print(nodes[_id]['to_texts'])
 	else:
+		if args.responses_to_response == "arg_response":
+			most_similar_response_pro = []
+			for claim in most_similar_pro:
+				if claim in text_to_response:
+					for response in text_to_response[claim]:
+						most_similar_response_pro.append(response)
+			most_similar_pro = most_similar_response_pro[-args.num_responses:]
+			most_similar_response_con = []
+			for claim in most_similar_con:
+				if claim in text_to_response:
+					for response in text_to_response[claim]:
+						most_similar_response_con.append(response)
+			most_similar_con = most_similar_response_con[-args.num_responses:]
+			most_similar_response_neutral = []
+			for claim in most_similar_neutral:
+				if claim in text_to_response:
+					for response in text_to_response[claim]:
+						most_similar_response_neutral.append(response)
+			most_similar_neutral = most_similar_response_neutral[-args.num_responses:]
 		most_similar_pro.reverse()
 		most_similar_con.reverse()
 		most_similar_neutral.reverse()
-		print( "###///".join(most_similar_pro) + "$!$!$" + "###///".join(most_similar_con)+ "$!$!$" + "###///".join(most_similar_neutral))
-
+		pro_str = "###///".join(most_similar_pro) if len(most_similar_pro) > 0 else ""
+		con_str = "###///".join(most_similar_con) if len(most_similar_con) > 0 else ""
+		neutral_str = "###///".join(most_similar_neutral) if len(most_similar_neutral) > 0 else ""
+		print( pro_str + "$!$!$" + con_str + "$!$!$" + neutral_str)

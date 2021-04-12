@@ -1,0 +1,12 @@
+{
+    "topics": [
+        {
+            "id": "drugs",
+            "topic": "Drugs",
+            "text": "All drugs should be legalised.",
+            "data_path": "kialoData/all-drugs-should-be-legalized-7100_cleaned.txt",
+            "stances_path": "kialoData/all-drugs-should-be-legalized-7100_stances.txt",
+            "sbert_path": "kialoData/sbert/sbert_vecs_drugs.pkl"
+        }
+    ]
+}

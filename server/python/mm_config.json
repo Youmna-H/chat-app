@@ -1,0 +1,20 @@
+{
+    "topics": [
+        {
+            "id": "money",
+            "topic": "Morality of Money",
+            "text": "Morality of Money:\tBut the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight",
+            "data_path": "MoralMazeData/Money",
+            "utt_to_stance_path": "MoralMazeData/money_utt_stances.txt",
+            "sbert_path": "MoralMazeData/sbert/sbert_vecs_money.pkl"
+        },
+        {
+            "id": "empire",
+            "topic": "British Empire",
+            "text": "British Empire:\tIs it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight.",
+            "data_path": "MoralMazeData/britishempire",
+            "utt_to_stance_path": "MoralMazeData/british_empire_utt_stances.txt",
+            "sbert_path": "MoralMazeData/sbert/sbert_vecs_britishempire.pkl"
+        }
+    ]
+}

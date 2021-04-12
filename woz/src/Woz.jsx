@@ -89,33 +89,46 @@ const CandidateResponseContainer = ({ usermessage, model, num_responses, classif
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error! ${error.message}</div>;
     var color_codes = { "pro": "green", "con": "red", "neutral": "blue" }
-    if (num_responses < data.wozCandidateResponses.length) {
+
+    if (classify) {
+        var pro_responses = data.wozCandidateResponses.filter(obj => obj.stance === 'pro');
+        var con_responses = data.wozCandidateResponses.filter(obj => obj.stance === 'con');
+        var neutral_responses = data.wozCandidateResponses.filter(obj => obj.stance === 'neutral');
         return (
             <div>
                 <label>Pro</label>
-                <ol>
-                    {
-                        data.wozCandidateResponses.filter(obj => obj.stance === 'pro').map(item => <li key={item.relevance}
-                            style={{ color: color_codes[item.stance] }}>
-                            {item.content} </li>)
-                    }
-                </ol>
+                {pro_responses.length > 0 ?
+                    <ol>
+                        {
+                            pro_responses.map(item => <li key={item.relevance}
+                                style={{ color: color_codes[item.stance] }}>
+                                {item.content} </li>)
+                        }
+                    </ol>
+                    : <div><label>Couldn't find relevant responses</label></div>
+                }
                 <label>Con</label>
-                <ol>
-                    {
-                        data.wozCandidateResponses.filter(obj => obj.stance === 'con').map(item => <li key={item.relevance}
-                            style={{ color: color_codes[item.stance] }}>
-                            {item.content} </li>)
-                    }
-                </ol>
+                {con_responses.length > 0 ?
+                    <ol>
+                        {
+                            con_responses.map(item => <li key={item.relevance}
+                                style={{ color: color_codes[item.stance] }}>
+                                {item.content} </li>)
+                        }
+                    </ol>
+                    : <div><label>Couldn't find relevant responses</label></div>
+                }
                 <label>Neutral</label>
-                <ol>
-                    {
-                        data.wozCandidateResponses.filter(obj => obj.stance === 'neutral').map(item => <li key={item.relevance}
-                            style={{ color: color_codes[item.stance] }}>
-                            {item.content} </li>)
-                    }
-                </ol>
+                {neutral_responses.length > 0 ?
+                    <ol>
+                        {
+                            neutral_responses.map(item => <li key={item.relevance}
+                                style={{ color: color_codes[item.stance] }}>
+                                {item.content} </li>)
+                        }
+                    </ol>
+                    : <div><label>Couldn't find relevant responses</label></div>
+                }
             </div>
         );
     }
@@ -321,12 +334,12 @@ const Woz = () => {
                                                 {state.data_type === "moralmaze" ?
                                                     (
                                                         <>
-                                                        <option className="money" value="money">MoneyMorality</option>
-                                                        <option className="empire" value="empire" >BritishEmpire</option>
+                                                            <option className="money" value="money">MoneyMorality</option>
+                                                            <option className="empire" value="empire" >BritishEmpire</option>
                                                         </>
                                                     ) : (
                                                         <>
-                                                        <option className="drugs" value="drugs">Drugs</option>
+                                                            <option className="drugs" value="drugs">Drugs</option>
                                                         </>
                                                     )
                                                 }
@@ -375,10 +388,10 @@ const Woz = () => {
                                                 Proposition
                                                 </FormRadio>
                                         </Col>
-                                        <Col xs={2} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "10px"}}>
+                                        <Col xs={2} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "10px" }}>
                                             <label >Retrieve:</label>
                                         </Col>
-                                        <Col xs={5} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "-30px"}}>
+                                        <Col xs={5} style={{ marginTop: "5px", marginBottom: "auto", marginLeft: "-30px" }}>
                                             <FormRadio
                                                 name="response"
                                                 checked={state.response === "arg"}

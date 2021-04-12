@@ -8,7 +8,7 @@ const users = [];
 
 const topics =  {"money": {"topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"},
 "empire":{"topic":"British Empire","text":"Is it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight."},
-"drugs":{"topic":"","text":"All drugs should be legalised."}};
+"drugs":{"topic":"Drugs","text":"All drugs should be legalised."}};
 
 var currentTopic = {"id":"money","topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"};
 //topic and topictext
@@ -95,15 +95,18 @@ const resolvers = {
       }
       wozCanndidateResponses = [];
       const python = data_type === "moralmaze" ?
-      spawnSync('python3', ['python/read_json.py', '-q', usermessage, '-m', model, '-n', 
-      num_responses, "--responses_per_stance", classify, "-u", utt === 'locution' ? "l" : "i", "-d", dataset])
+      spawnSync('python3', ['python/moralmaze.py', '--pre_path', "python/", '-q', usermessage, '-m', model, '-n', 
+      num_responses, "--responses_per_stance", classify, "-u", utt === 'locution' ? "l" : "i", "-d", dataset, '-rr', response])
       : 
-      spawnSync('python3', ['python/kialo.py', '-q', usermessage, '-m', model, '-n', 
+      spawnSync('python3', ['python/kialo.py', '-pre', "python/", '-q', usermessage, '-m', model, '-n', 
       num_responses, "--responses_per_stance", classify, "-d", dataset, '-rr', response]);
 
     //   try {
-    //     const python = 'python3 python/kialo.py -q "hi" -m sbert -rr arg_response';
+    //     const python = 'python3 python/kialo.py -pre python/ -q "hi" -m sbert -rr arg_response';
     //     execSync(python).toString();
+    //     console.log(python);
+    //     console.log(python.stderr.toString());
+    //     console.log(python.message.toString());
     //  } catch (error) {
     //     console.log(error.status);  // 0 : successful exit, but here in exception it has to be greater than 0
     //     console.log(error.message); // Holds the message you typically want.
@@ -111,7 +114,7 @@ const resolvers = {
     //     console.log(error.stdout);  // Holds the stdout output. Use `.toString()`.
     //  }
 
-    //   execSync('python3 python/kialo.py -q "hi" -m sbert -rr arg_response', function(error, stdout, stderr) {
+    // const python = execSync('python3 python/kialo.py -pre python/ -q "hi" -m sbert -rr arg_response', function(error, stdout, stderr) {
     //     console.log(stdout);
     //     console.log(error);
     //     console.log(stderr);
@@ -121,24 +124,31 @@ const resolvers = {
       var dataToSend = python.stdout.toString();
       var stances =  [];
       var responses = [];
+
+      console.log(dataToSend);
+
       //this is how the responses are splitted in python "###///"
       //delimeter between responses and stances is "$!$!$"
-      if (classify === 1 && data_type === 'moralmaze')
+      if (classify === 1)
       {
         var responses_all = dataToSend.trim().split("$!$!$");
-        var responses_pro = responses_all[0].split("###///");
-        var responses_con = responses_all[1].split("###///");
-        var responses_neutral = responses_all[2].split("###///");
+        var responses_pro = responses_all[0] != "" ? responses_all[0].split("###///"): [];
+        var responses_con = responses_all[1] != "" ? responses_all[1].split("###///"): [];
         for (var i = 0; i < responses_pro.length; i++) {
           stances.push("pro");
         }
         for (var i = 0; i < responses_con.length; i++) {
           stances.push("con");
         }
-        for (var i = 0; i < responses_neutral.length; i++) {
-          stances.push("neutral");
+        responses = responses_pro.concat(responses_con);
+        if (data_type === 'moralmaze')
+        {
+          var responses_neutral = responses_all[2] != "" ? responses_all[2].split("###///")  : [];
+          for (var i = 0; i < responses_neutral.length; i++) {
+            stances.push("neutral");
+          }
+          responses = responses.concat(responses_neutral)
         }
-        responses = responses_pro.concat(responses_con, responses_neutral)
       }
       else
       {
