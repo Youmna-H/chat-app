@@ -340,6 +340,10 @@ const Woz = () => {
                                                     ) : (
                                                         <>
                                                             <option className="drugs" value="drugs">Drugs</option>
+                                                            <option className="brexit" value="brexit">Brexit</option>
+                                                            <option className="veganism" value="veganism">Veganism</option>
+                                                            <option className="vaccination" value="vaccination">Vaccination</option>
+                                                            <option className="parent_license" value="parent_license">ParentLicense</option>
                                                         </>
                                                     )
                                                 }

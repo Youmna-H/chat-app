@@ -1,0 +1,33 @@
+ Discussion Title: It should be compulsory for those working with the elderly to take a COVID-19 vaccine
+
+1. It should be compulsory for those working with the elderly to take a COVID-19 vaccine
+1.1. Pro: It is the job of care home workers to protect the elderly they work with. If they do not want to get vaccinated, they are free to choose a different profession.
+1.1.1. Con: Given the havoc wreaked by COVID-19 on the job market, in practice care home workers would not be free to choose a different profession. In practice, they would be forced to choose between being vaccinated against their will or indefinite unemployment.
+1.1.1.1. Pro: Once the furlough scheme comes to an end in the UK, unemployment is [expected to skyrocket](https://www.theguardian.com/business/2021/feb/03/the-uks-covid-19-unemployment-crisis-in-six-charts).
+1.1.1.2. Con: As healthcare workers, care home workers are in [high demand](https://commonslibrary.parliament.uk/the-health-and-social-care-workforce-gap/). Therefore, they are unlikely to be unemployed for long.
+1.1.2. Pro: Care home workers have a well-established [legal duty of care](http://www.nbfa.org.uk/negligence-in-care-homes-and-nursing-homes/) to their patients.
+1.2. Pro: Getting vaccinated will not only help the elderly but the wider population as well. It is our duty as citizens to prevent the spread of this virus
+1.2.1. Pro: If care workers interact other people while infected, [they are likely to spread the virus](https://www.who.int/news-room/commentaries/detail/transmission-of-sars-cov-2-implications-for-infection-prevention-precautions#:~:text=Current%20evidence%20suggests%20that%20transmission,%2C%20talks%20or%20sings.).
+1.2.1.1. Con: This problem is not exclusive to care workers but applies to anyone. Hence, care workers in particular shouldn't be forced to take the vaccine.
+1.3. Con: We are still unsure of the secondary effects of the COVID vaccines. At this moment in time, it should only be willing volunteers taking the vaccine, due to the risks it may pose
+1.3.1. Con: An extensive safety [network](https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html) is in place to ensure that the vaccines are safe to use.
+1.3.2. Pro: Some people who have received the vaccine produced by Pfizer and BioNtech have had "[severe allergy-like reactions](https://science.sciencemag.org/content/371/6524/10)".
+1.3.2.1. Con: These reactions are rare, only occurring in [11.1 cases](https://www.aarp.org/health/conditions-treatments/info-2020/covid-vaccine-allergic-reactions/) out of 1 million for the vaccine.
+1.3.2.2. Con: Precautions are being taken to protect those with allergies.
+1.3.2.2.1. Pro: [Moderna](https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Pfizer-BioNTech.html) \(p.2\) and [Pfizer](http://fda.gov/media/144638/download) \(p.2\) have made ingredient lists for their vaccines available so individuals can confirm whether or not they are allergic to the vaccine before it is administered.
+1.3.2.2.2. Pro: [CDC guidance](https://www.cdc.gov/mmwr/volumes/70/wr/mm7002e1.htm) includes screening individuals receiving the COVID-19 vaccine for contraindications and precautions.
+1.3.2.2.3. Pro: [CDC guidance](https://www.cdc.gov/mmwr/volumes/70/wr/mm7002e1.htm) recommends that supplies needed to manage anaphylaxis \(such as EpiPens\) be available at centers administering COVID-19 vaccines.
+1.3.3. Con: The vaccine was approved only after it underwent trials that assessed its safety.
+1.3.3.1. Pro: The vaccines underwent [phase 3 trials](https://www.nccn.org/patients/resources/clinical_trials/phases.aspx#:~:text=Phase%20III%20trials%20compare%20a,called%20trial%20arms%2C%20by%20chance.), which assess the side effects of drugs, and were [determined](https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-biontech-conclude-phase-3-study-covid-19-vaccine) to have no serious side effects.
+1.3.4. Con: The vaccines have been deemed safe by regulators.
+1.3.4.1. Pro: The FDA [approved](https://www.cidrap.umn.edu/news-perspective/2020/12/fda-approves-use-pfizer-covid-vaccine-shipments-begin) the use of the Pfizer vaccine.
+1.3.4.2. Pro: Health Canada [authorized](https://www.canada.ca/en/health-canada/news/2020/12/health-canada-authorizes-first-covid-19-vaccine0.html) the use of the Pfizer vaccine after carefully evaluating its safety.
+1.4. Pro: The elderly are much more likely to suffer from/ die from COVID. We must ensure their safety by vaccinating those around them.
+1.4.1. Pro: The death rate, due to COVID-19, [progressively increases for people over the age of 50](https://theconversation.com/why-are-older-people-more-at-risk-of-coronavirus-133770).
+1.4.2. Pro: As people become older, their [immune systems weaken](https://theconversation.com/why-are-older-people-more-at-risk-of-coronavirus-133770). Therefore, they are likely to be affected much worse by infections.
+1.5. Con: Getting vaccinated should be an individual choice. Governments cannot force this upon its citizens, regardless of their occupation
+1.5.1. Con: People who choose to work in public healthcare systems are tacitly consenting to occupational requirements imposed by government since the government is in charge of public healthcare.
+1.6. Con: This would be extremely hard to regulate. Would it be measured around time spent with the elderly, the age of the client, or the health of the client? Where is the line drawn?
+1.6.1. Con: Although there may be grey areas, there are some clear scenarios in which people are "working with the elderly", such as those who work in care homes.
+1.6.2. Con: It would be disproportionate to allow potential definitional grey areas to thwart attempts to protect the elderly from COVID-19.
+1.6.3. Pro: Given that compulsory vaccination encroaches on bodily autonomy, it is only fair that the associated regulations are well-defined.

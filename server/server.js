@@ -8,7 +8,11 @@ const users = [];
 
 const topics =  {"money": {"topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"},
 "empire":{"topic":"British Empire","text":"Is it right to make moral judgments about the past through the prism of our modern sensibilities? Should we be held responsible for the sins of Empire and if so where should it stop? That's our Moral Maze tonight."},
-"drugs":{"topic":"Drugs","text":"All drugs should be legalised."}};
+"drugs":{"topic":"Drugs","text":"All drugs should be legalised."}, "brexit":{"topic":"Brexit", "text":"Brexit: Was it a good choice for the UK?"},
+"veganism":{"topic":"Veganism", "text":"Veganism is a natural right"},
+"vaccination":{"topic": "Vaccination","text": "Should COVID-19 Vaccines be Mandatory?"},
+"parent_license":{"topic": "Parent License",  "text": "Should a license be required in order to have a child (procreate)?"}
+};
 
 var currentTopic = {"id":"money","topic":"Morality of Money", "text": "But the crisis has reinforced the more old fashioned view, that taking on unaffordable debts, nationally or individually, is inherently wrong, and bankruptcy a matter of shame.  Either way, how do you strike a moral balance between the interests of the lender and the borrower? The morality of money and debt is our moral maze tonight"};
 //topic and topictext
@@ -123,9 +127,7 @@ const resolvers = {
 
       var dataToSend = python.stdout.toString();
       var stances =  [];
-      var responses = [];
-
-      console.log(dataToSend);
+      var responses = [];;
 
       //this is how the responses are splitted in python "###///"
       //delimeter between responses and stances is "$!$!$"

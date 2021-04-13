@@ -1,0 +1,261 @@
+Discussion Title: Should vaccinations be mandatory?
+
+1. Vaccinations should be mandatory.
+1.1. Pro: Making vaccines mandatory will prevent any epidemics from occurring due to lack of adherence to vaccination programmes or public opinion shifting \(e.g. Anti-Vax movement\).
+1.1.1. Pro: In the Netherlands, measles [returned](https://wwwnc.cdc.gov/eid/article/7/7/01-7743_article) in a community with low vaccine uptake.
+1.1.1.1. Con: Measles outbreaks also can and do occur in [highly vaccinated populations](https://www.cdc.gov/mmwr/preview/mmwrhtml/00000359.htm).
+1.1.1.1.1. Con: Outbreaks of contagious disease are much more limited among highly-vaccinated populations \(3.8% infection rate of students in the example above, vs. 88% infection rate among unimmunized kids in the grandparent claim\) This is an excellent example of how vaccines work.
+1.1.1.1.2. Con: The example above was prior to the \(1987\) recommendation of a two-shot series for MMR immunization. Rates of measles spread are [decreased in the US](https://academic.oup.com/jid/article/189/Supplement_1/S69/2082538) \(see fig. 2\) since that change.
+1.2. Pro: Vaccination program saves money because preventing the desease is less expensive than curing it \[[WHO](https://www.who.int/bulletin/volumes/95/9/16-178475.pdf)\]. Thus, it reduces social assistance expenses.
+1.3. Con: Vaccines have \(potentially life-threatening\) side effects.
+1.3.1. Pro: Unvaccinated mothers exposed to an illness in childhood developed a robust, permanent immunity they were able to pass on to their infants via [antibodies in breastmilk](http://www.ajtmh.org/content/journals/10.4269/ajtmh.2008.79.787#html_fulltext). Today, thanks to mass vaccination, infants are at [greater risk](https://academic.oup.com/jid/article/208/1/1/796926) in the event of an outbreak since their vaccinated mothers aren't as well able to protect them.
+1.3.1.1. Con: The risk of infants not getting passive immunity in breast milk, is acceptable when the disease in question has been eliminated by an effective vaccine.
+1.3.2. Pro: [Hundreds](http://healthimpactnews.com/2015/zero-u-s-measles-deaths-in-10-years-but-over-100-measles-vaccine-deaths-reported/) of people have died as a result of vaccines.
+1.3.2.1. Con: Though [some die from complications arising from vaccination, the numbers are not substantial](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4599698/) and magnitudes less than the tens of millions of lives saved by mandatory vaccination programs.
+1.3.2.2. Pro: Vaccines increase [infant mortality](https://www.thehealthyhomeeconomist.com/new-study-more-vaccines-increase-infant-mortality-rates/) rates due to a [correlation](http://journals.sagepub.com/doi/abs/10.1177/0960327111407644) between administration of vaccines to children under 1 year of age and biochemical or synergistic toxicity.
+1.3.2.2.1. Con: The cited study fails to effectively eliminate confounders to say with a high certainty that the stated correlation is a cause.
+1.3.2.2.1.1. Con: We cannot know for sure that it is not causal. The possibility of it being so is certainly a reason not to mandate vaccines.
+1.3.2.2.1.2. Con: This is a strawman fallacy. The [authors](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736\(97\)11096-0/fulltext) did not claim a causal relationship was proven. Rather, they observed an association and called for more studies.
+1.3.2.2.2. Con: The study fails to take into account infant lives saved by vaccines studied.
+1.3.2.2.2.1. Pro: Even if that study's observed correlation were to be shown to be a causal relationship the small increase in infant mortality is orders of magnitude smaller than the decrease in mortality from the vaccination programs.
+1.3.2.3. Pro: If there is any possibility of something resulting in death, then it should not be the place of the government to force people to do it. Individuals should be able to consider the risks and decide for themselves.
+1.3.2.3.1. Con: This standard is unrealistic. The risk of death from any activity is not zero, but the government must have the authority to compel certain things to function. It even has the authority to draft soldiers in wartime, which is a very high-risk activity. The risk from vaccines is acceptably low when used as prescribed.
+1.3.3. Pro: Vaccines are painful.
+1.3.3.1. Con: Vaccines are less painful than dying of vaccine-preventable diseases.
+1.3.4. Pro: Vaccines have been linked to autism.
+1.3.4.1. Con: There is no actual evidence to support the claim that vaccinations and autism are linked.
+1.3.4.1.1. Con: In a hearing of the House Government Reform and Oversight Committee, Congressman Posey questioned officials from the CDC who admitted that they had not studied vaccinated vs unvaccinated subjects before approving vaccines for public distribution. See video at 2:20: [youtube.com](https://www.youtube.com/watch?v=uNWTOmEi_6A)
+1.3.4.1.1.1. Con: That would not be an appropriate method to study vaccine risks. It would be extremely expensive. It would unethically risk the population that would be at risk of the disease prevented by the vaccination.
+1.3.4.1.2. Con: A new study links aluminium in the brain to Autism. Denmark will confirm this study with a large group of people soon. Aluminium is in more then half the vaccines given to children. [sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0946672X17308763)  This will be the biggest scandal in history when vaccines are proven to cause Autism which is 1 in 28 boys in the USA.
+1.3.4.1.3. Con: False. There is a great deal of evidence that vaccines can cause autism. For starters, the acknowledgment of CDC director Julie Gerberding, who admitted that vaccines can cause brain damage leading to symptoms of autism. The specific case she was talking about was a girl who developed autism after receiving multiple vaccines at once and whose family was awarded compensation for it under the National Vaccine Injury Compensation Program.[transcripts.cnn.com](http://transcripts.cnn.com/TRANSCRIPTS/0803/29/hcsg.01.html)
+1.3.4.1.3.1. Con: The NVIC is designed with a low burden of proof because the vaccine programs are mandatory. Getting an award from the vaccine courts is nothing like proof that vaccines caused your injury.
+1.3.4.1.3.1.1. Con: "After a thorough review, DVIC has concluded that compensation is appropriate in this case. In sum, DVIC has concluded that the facts of this case meet the statutory criteria for demonstrating that the vaccinations CHILD received on July 19, 2000, significantly aggravated an underlying mitochondrial disorder, which predisposed her to deficits in cellular energy metabolism, and manifested as a regressive encephalopathy with features of autism spectrum disorder."[huffingtonpost.com](https://www.huffingtonpost.com/david-kirby/the-vaccineautism-court-d_b_88558.html)
+1.3.4.1.3.1.1.1. Con: The key words in this sentence being "underlying mitochondrial disorder" - this case is not representative of the vast majority of the population.
+1.3.4.1.3.2. Pro: -> See 1.3.4.1.3.1.1.
+1.3.4.2. Pro: Robert Kennedy Jr published an article proposing that thimerosal-containing [vaccines caused autism](https://en.wikipedia.org/wiki/Deadly_Immunity).
+1.3.4.2.1. Con: Robert Kennedy Jr, referenced in this claim, is known for [stretching the truth](https://www.statnews.com/2017/09/22/robert-kennedy-vaccine-safety/) and as such should not be seen as a reliable source.
+1.3.4.2.1.1. Pro: When someone has a history of lying one can discount the truth value of their future statements.
+1.3.4.2.2. Con: Kennedy's work on vaccines and autism included [5 factual errors](https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.#Views_on_autism_and_vaccines), which the magazine it was published in had to correct, before retracting the article completely.
+1.3.4.3. Pro: In 1998, [Andrew Wakefield](https://en.wikipedia.org/wiki/Andrew_Wakefield#Claims_of_measles_virus%E2%80%93Crohn's_disease_link) authored a research paper claiming the link.
+1.3.4.3.1. Con: The Wakefield, et al, paper did not claim to have found an association between the MMR and autism. It only observed parents were making that association and hypothesized the link.
+1.3.4.3.1.1. Pro: They called for more research and emphasized, "We did not prove an association between measles, mumps, and rubella vaccine and the syndrome described [\(p. 641\).](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736\(97\)11096-0/fulltext)
+1.3.4.3.2. Con: His findings were never duplicated and the paper was later deemed fraudulent. Andrew Wakefield was subsequently [stripped](http://healthland.time.com/2010/05/24/doctor-behind-vaccine-autism-link-loses-license/) of his medical license as a direct result.
+1.3.4.3.2.1. Con: The Lancet did not cite fraud as a reason for retraction, and Wakefield's co-author John Walker-Smith appealed the decision, and the High Court found that the verdicts of professional misconduct and ethics violations were unsupported by the evidence. His medical license [was reinstated.](https://www.ebcala.org/areas-of-law/vaccine-law/co-author-of-lancet-mmr-autism-study-exonerated-on-all-charges-of-professional-misconduct)
+1.3.4.3.2.2. Con: All of the team that worked with Andrew Wakefield on the study [won in court in 2013](http://www.bbc.com/news/health-17283751). They had just as much input into the study and were found to have done no wrong doing. Wakefield was therefore simply a scapegoat.
+1.3.4.3.2.2.1. Con: The [article cited](http://www.bbc.com/news/health-17283751) ends with: "As Mr Justice Mitting observed in his judgement, 'There is now no respectable body of opinion which supports \(Dr Wakefield's\) hypothesis, that MMR vaccine and autism/enterocolitis are causally linked'.
+1.3.4.3.3. Con: The "research" only included 12 subjects and was poorly run. A very brief summary can be found [here](https://www.vox.com/cards/vaccines-facts-measles-autism-dangers/vaccines-cause-autism).
+1.3.4.3.4. Con: The Lancet, who published the paper, later [retracted it.](https://www.theguardian.com/society/2010/feb/02/lancet-retracts-mmr-paper)
+1.3.4.3.5. Con: In addition to appalling methodology and fabricated data, Wakefield had significant undisclosed conflicts of interest. He is in no way a credible source of information on vaccine safety.
+1.3.4.4. Con: There have been many proper studies ever since proving that there's no link between vaccines and autism.
+1.3.4.4.1. Pro: A [meta-analysis](https://www.sciencedirect.com/science/article/pii/S0264410X14006367?via%3Dihub) of studies on the relationship between vaccines and autism concluded that there is no link between the two.
+1.3.4.5. Con: Even if vaccines did cause autism - which they don't - dying of a vaccine-preventable disease is surely much worse than having autism.
+1.3.4.5.1. Pro: Many people with autism can live happy and productive lives. Often what prevents this is not the fact they have autism, but the social barriers discriminating against them. If anti-vaxxers really cared about autism, they would work towards removing these barriers.
+1.3.4.6. Con: This is a terrible misconception. The only study that created a link to this is known to be fraudulent, being paid for by pharmaceutics companies who didn't want people to be vaccinated. [This](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5789217/) is just one of many articles that show that vaccines do NOT have any relation with autism.
+1.3.5. Con: Diseases that are preventable with vaccination, like [polio](https://www.mayoclinic.org/diseases-conditions/polio/symptoms-causes/syc-20376512), also have disastrous effects on people's lives.
+1.3.5.1. Con: The vast majority of people who are infected with polio don't even show any symptoms.
+1.3.5.1.1. Pro: [Only 1%-2%](https://www.cdc.gov/vaccines/pubs/pinkbook/polio.html) resulted in nonparalytic meningitis, and fewer than 1% resulted in paralysis. Among paralytic cases, many recovered completely and most recovered muscle function to some degree.
+1.3.5.1.1.1. Con: The less-than-1% rate of paralysis with polio infection, is far greater than the risk of paralysis or death [from the vaccine](https://www.rxlist.com/ipol-side-effects-drug-center.htm)
+1.3.5.2. Pro: 1 in 200 cases lead to [irreversible](http://www.who.int/mediacentre/factsheets/fs114/en/) paralysis.
+1.3.6. Con: While vaccines have some very minimal side effects they are completely swamped by the reduction in mortality and morbidity from the vaccines.
+1.3.6.1. Pro: Billions of doses over decades with incredibly tight surveillance have shown that the effects are really good and the side effects are very minimal.
+1.3.6.1.1. Pro: If it were not a net positive it wouldn't be continued.
+1.3.7. Pro: Vaccines can lead to [vaccine-derived polio virus](http://www.who.int/features/qa/64/en/), which can paralyse people.
+1.3.7.1. Con: Vaccine-derived polio-virus is [extremely rare](https://vaccines.procon.org/view.additional-resource.php?resourceID=005964): there is a chance of 0.000043% vaccine-associated polio.
+1.3.7.1.1. Con: In India, there was a huge increase in non-polio acute flaccid paralysis\(NPAFP\) cases in 2011, with an extra [47,500 new cases](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6121585/#:~:text=The%20last%20case%20of%20polio) of NPAFP.
+1.3.8. Pro: Vaccines carry risk, and some children may be [genetically predisposed](https://link.springer.com/article/10.1007/s12016-010-8213-3) to vaccine injury.
+1.3.8.1. Con: There is no evidence that we can sort children into "likely to be damaged by vaccines" and "unlikely to be damaged by vaccines" groups to a greater extent than we currently recommend some children not get vaccinated.
+1.3.8.2. Pro: The idea that some children must be sacrificed to hypothetically protect other children is barbaric.
+1.3.8.2.1. Con: Herd immunity protects people who cannot have vaccinations by preventing those who can be vaccinated from carrying harmful diseases. Therefore, herd immunity is at its strongest when vaccinations are mandatory.
+1.3.8.2.1.1. Pro: The immunocompromised are protected by [herd immunity.](https://www.vaccines.gov/basics/work/protection/index.html)
+1.3.8.2.1.2. Pro: As long as a sufficiently large percentage of the population is immune, newborn infants are protected by herd immunity.
+1.3.8.2.1.2.1. Con: Only as long as the herd immunity is maintained. If a sufficiently large percentage of the population are no longer immune over time, the herd immunity breaks down.
+1.3.8.2.1.2.2. Con: Newborns are more effectively protected by natural herd immunity than by vaccine "herd immunity".
+1.3.8.2.1.2.2.1. Con: There's no evidence that vaccine immunity is less strong than natural immunity. With vaccine immunity we actually reduce the circulating strains of a virus thus we frequently need ten year or thereabouts boosters.  This means that anti vaxxers claim that natural immunity is better than vaccine granted immunity.
+1.3.8.2.1.2.2.2. Pro: Waning immunity with the measles vaccine is a [recognized problem](https://www.sciencedirect.com/science/article/pii/S0264410X00001754), whereas natural infection prior to 1957 is considered by the CDC as evidence of immunity because natural immunity is known to confer a more robust, longer-lasting immunity.
+1.3.9. Con: [Vaccine Exemptions](https://www.historyofvaccines.org/content/articles/vaccination-exemptions) for medical reasons exist.
+1.3.9.1. Con: Medical exemptions are limited and don't include genetic predisposition.
+1.3.10. Con: The extremely negative side effects of vaccination shown on media have [no scientific basis](https://www.sciencedirect.com/science/article/pii/S0264410X09019264)
+1.4. Con: Medical institutions and regulatory bodies should not be trusted with a mandatory vaccination policy.
+1.4.1. Con: Vaccines are often developed, heavily [regulated](https://www.goodreads.com/book/show/9691004-the-panic-virus), and [subsidized](http://fortune.com/2016/08/12/zika-virus-funding/) by the federal government in the interest of the general good.
+1.4.1.1. Con: The claim begs the question whether public vaccine policy is "in the interest of the general good" as it is a matter of opinion and highly debatable, to say the least.
+1.4.1.1.1. Con: Except of course that it's not exactly "highly debatable", when it comes to the scientific community, which is pretty clear on both whether vaccines are safe and whether they should be mandatory due to the fact that they've been preventing life-threatening diseases for ages.
+1.4.2. Pro: The CDC has been linked to improper practice in the past.
+1.4.2.1. Con: The CDC does not [regulate](https://www.cdc.gov/vaccines/basics/test-approve.html) vaccine development.
+1.4.2.1.1. Pro: The [CDC](http://Https://www.cdc.gov/vaccines/basics/test-approve.html) facilitates the research and monitoring of communicable diseases and their prevention, and is not responsible for the regulation of vaccinations; that jobs falls to the [FDA](http://Https://www.fda.gov/BiologicsBloodVaccines/Vaccines/).
+1.4.2.2. Pro: There are many cases of [corruption](https://www.ecowatch.com/cdc-corruption-robert-kennedy-jr-2096438139.html) within the CDC where studies and specialists have been compromised. As long as this continues, the safety of new Vaccines must be questioned.
+1.4.2.2.1. Con: -> See 1.3.4.2.1.
+1.4.2.3. Pro: There is [evidence](https://globalfreedommovement.org/evidence-corruption-scientific-misconduct-at-cdc/) to prove that in some cases, the CDC edits control groups and data to speed up the roll-out of new vaccines.
+1.4.3. Pro: So long as the pharmaceutical industry is a for-profit business, vaccines must not be mandatory.
+1.4.3.1. Con: Many mandatory safety measures \(like smoke detectors or fire extinguishers\) involve promoting products that are made by for-profit companies.
+1.4.3.2. Pro: Mandatory vaccination would eliminate incentive for proper long-term, in-depth study into understanding, identifying and bypassing mechanisms of vaccine injury and improved administration techniques for increased safety, efficacy, and cost efficiency as any such endeavours would only serve to reduce profitability when administering to a population that has no choice, regardless of those factors.
+1.4.3.2.1. Con: In the case of other industries where safety features and equipment are mandate, there are independent regulatory bodies which certify that the product meets the required standards.
+1.4.3.2.1.1. Pro: [Underwriters Laboratory](https://www.ul.com/news/ul-releases-new-requirements-smoke-alarm-standards-opens-new-test-lab#:~:text=UL%20has%20been%20certifying%20smoke,Alarms%20on%20January%202%2C%201976.&text=UL%20fosters%20safe%20living%20and,safety%2C%20security%20and%20sustainability%20challenges.) establishes national \(US\) standards and certifies the effectiveness and smoke detectors in the US. UL does not manufacture smoke alarms or profit in any way from promoting their use.
+1.4.3.2.2. Con: If vaccines are mandatory, [there is still competition](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2936995/) between different pharma companies for market share based on efficacy, cost, and side effects among the multiple vaccines for a given disease.
+1.5. Pro: Parents choosing not to vaccinate their children is child neglect, and the government should intervene to prevent this.
+1.5.1. Pro: Children do not have the same capacity to advocate for themselves as adults do, so the government must step in to ensure their best interests are being met.
+1.5.1.1. Pro: If the government feels that children will suffer at the hand of parents regarding some medical decisions, they have a duty to make actions compulsory.
+1.5.1.1.1. Pro: There have been cases of governments determining that children of Jehovah's Witnesses should receive blood transfusions, even in the face of objections from their parents.
+1.5.1.1.1.1. Pro: The [Supreme Court in Canada](http://www.cbc.ca/news/canada/girl-s-forced-blood-transfusion-didn-t-violate-rights-top-court-1.858660) ruled on such a case, saying that 'such medical interventions are constitutionally sound, striking a balance between the choice of the child and the state's protection of the child.'
+1.5.1.1.1.1.1. Con: Just because something is constitutionally sound does not mean it is ethically the right decision.
+1.5.1.1.1.2. Pro: A high court judge in the [United Kingdom](https://www.theguardian.com/world/2014/dec/08/judge-rules-jehovahs-witness-boy-blood-transfusion) ruled that a young boy could receive a blood transfusion despite religious objections from his parents.
+1.5.2. Pro: Some parents don't vaccinate their children because they never get around to it, rather than being opposed to vaccines. Making it mandatory increases the importance and urgency of getting their children vaccinated and makes them more likely to prioritise doing it.
+1.5.3. Con: Parents should be allowed to make their own choices when it comes to medical decisions about their children.
+1.5.3.1. Pro: We give parents the freedom to make many other choices about their children's lives which can effect their futures. They often choose their schools, control their diets etc. Medical decisions should be no different.
+1.5.3.1.1. Con: The state takes away those freedoms on very important decisions, or when parents make unsafe choices.
+1.5.3.1.1.1. Pro: Child car seats had to be enforced by the government, as many parents did not buy them.
+1.5.3.2. Con: Children have their own individual bodies and as such should have their own rights over their bodies. For this reason, parents should not have complete control over this.
+1.5.3.3. Pro: Parents are in the unique position of knowing their child closely on an individual level. This means that they are in the best position to know what is in the best interest of their child.
+1.5.3.3.1. Con: Parents are often emotive in their decision making rather than rational. They are more likely to be swayed by questionable but emotive anti-vaccine sources than medical professionals who are better able to discern scientific evidence from pseudoscience.
+1.5.3.3.2. Con: It's unclear what special knowledge a parent has about their child at two months \(when most doctors recommend children be vaccinated against polio\) in terms of deciding whether or not to vaccinate their child that a medical professional also would not have.
+1.5.3.4. Con: Parents do not have unlimited authority to consent on their child's behalf.
+1.5.3.4.1. Pro: In most jurisdictions, adolescents can consent to certain medical treatments without the consent of their parents, and courts and laws can overrule parental decisions \(for example, to require that a child receive a blood transfusion against parental wishes\) where the health of the child is at stake. This is hardly an unrestricted authority.
+1.5.3.4.1.1. Pro: In the UK, girls have to [consent](https://www.nhs.uk/Conditions/vaccinations/Pages/hpv-vaccination-parents-rights.aspx) to being vaccinated. If they refuse, the parents cannot override their decision.
+1.5.3.4.1.2. Pro: In the UK, children below the age of medical consent who are [Gillick competent](https://www.nspcc.org.uk/preventing-abuse/child-protection-system/legal-definition-child-rights-law/gillick-competency-fraser-guidelines/) can consent to medical treatment, including if their parents disagree with their decision.
+1.5.3.4.1.3. Pro: In Australia, children below the age of medical consent who are [Gillick competent](http://www.healthlawcentral.com/decisions/consent-minors/) can consent to medical treatment, including if their parents disagree with their decision.
+1.5.3.4.1.4. Con: In the matter of blood transfusions, an emergency order must be entered by a judge.
+1.5.3.4.1.5. Con: In Florida, a minor may only consent to treatment for an [STI](https://www.guttmacher.org/state-policy/explore/minors-access-sti-services), or [pregnancy](https://www.guttmacher.org/state-policy/explore/overview-minors-consent-law).
+1.5.3.4.2. Con: A legal precedent exists to classify not vaccinating children as medical [child neglect](https://criminal.findlaw.com/criminal-charges/child-neglect.html), for it puts children at unnecessary risk of infectious and deadly disease.
+1.5.3.4.3. Pro: In many jurisdictions, courts can overrule parents' decisions, and in some cases there are certain procedures that courts must approve in advance.
+1.5.3.4.3.1. Pro: In Australia, state Supreme Courts have [parens patriae](https://en.wikipedia.org/wiki/Parens_patriae) jurisdiction \(the power to make decisions for those unable to make them themselves\), and Family Courts have welfare provisions [allowing them](http://www.healthlawcentral.com/decisions/consent-minors/) to intervene to determine the proper course of medical treatment for a minor.
+1.5.3.4.3.2. Pro: In Australia, there are certain medical procedures that require the decision of a court to perform.
+1.5.3.4.3.2.1. Pro: The sterilisation of a young person with an intellectual disability [requires court approval](http://www.healthlawcentral.com/decisions/consent-minors/).
+1.5.3.4.3.2.2. Pro: The termination of a minor who is not Gillick competent's pregnancy [requires court approval](https://jade.io/article/83861).
+1.5.3.4.3.2.3. Pro: Both hormone treatment for gender identity disorder and sex reassignment surgery [require court approval](http://www.healthlawcentral.com/decisions/consent-minors/) if the patient is a minor.
+1.5.3.4.3.2.4. Pro: The withdrawal of medical treatment from a child [requires court approval](https://aifs.gov.au/publications/citizen-child-australian-law-and-childrens-rights/8-medical-procedures-children).
+1.5.3.4.3.3. Con: The fact that the state "can" do something doesn't make it right.
+1.5.3.5. Con: Parents should not be the ones who decide when that choice has a far-reaching effect on the overall health status of the community.
+1.5.3.5.1. Pro: Vaccination programmes rely on [herd-immunity](https://en.wikipedia.org/wiki/Herd_immunity) to be effective.
+1.5.3.5.1.1. Con: Universal mandatory vaccination is not necessary to achieve herd immunity.
+1.5.3.5.1.1.1. Pro: Ring vaccination, whereby only those known to have a disease and their contacts, is highly effective.
+1.5.3.5.1.1.1.1. Pro: [Ring vaccination](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1069029/) led to the disappearance of smallpox in eastern Nigeria even though the population coverage was less than 50%.
+1.5.3.5.1.1.2. Pro: Mandates are not necessary to achieve high enough rates of vaccination required for herd immunity.
+1.5.3.5.1.1.2.1. Pro: Countries like [Sweden, Norway, Denmark and the Netherlands](https://ourworldindata.org/vaccination)(There are countries with high vaccination rates without compulsory vaccination and governments do not want to disrupt public trust and self-responsibility by making vaccination compulsory, particularly if it is not seen as needed. It has been argued that high coverage has been achieved through “other approaches or efforts” and so acceptance of compulsory vaccination might be problematic in countries such as Sweden, Norway, Denmark, the Netherlands, and the UK.) have high vaccination rates despite them being voluntary.
+1.5.3.5.1.1.2.2. Con: Mandates, with stricter criteria for exemptions, were correlated with higher immunization rates in a state-by-state \(US\) observational [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6016709/).
+1.5.3.5.1.1.2.2.1. Con: The point remains that it is not the lack of mandates itself that results in lower vaccination rates. It is the government coercion plus some other factor, i.e., a decision that the proposed benefits of the vaccine do not outweigh the risks, that results in the lower rates.
+1.5.3.5.1.2. Pro: -> See 1.3.8.2.1.
+1.5.3.5.1.3. Pro: People who fail to vaccinate are free riding on herd immunity and should be required to do their part.
+1.5.3.5.1.3.1. Con: People who support mandatory vaccinations have no respect for the right to informed consent and no compassion for those who are injured as a result of this policy.
+1.5.3.5.1.3.1.1. Con: It can just as easily be argued that people who oppose mandatory vaccination have no respect for the right of vulnerable people to avoid serious illness and no compassion for those who die as a result of a lack of herd immunity.
+1.5.3.5.1.3.2. Pro: People who don't support mandatory vaccinations have no compassion for the victims of vaccine preventable diseases and no respect for the rights of people to be as free from disease as possible.
+1.5.3.5.1.4. Con: The need to protect others through herd immunity does not justify mandating the vaccine for those who are opposed to getting it.
+1.5.3.5.1.4.1. Con: The right to informed consent is not absolute and should be balanced against other rights, such as the right to protection from lethal diseases.
+1.5.3.5.1.4.1.1. Con: There is no such thing as a "right of people not to die" of any disease.
+1.5.3.5.1.4.1.1.1. Con: Society can mandate vaccines to save thousands or millions of lives. It would be unethical to allow those millions to die in order to enforce a competing ethic that has a significantly lower human cost.
+1.5.3.5.1.4.1.2. Con: The argument that it's okay to violate the right to informed consent to a certain degree is simply a rejection of this most fundamental medical ethic.
+1.5.3.5.1.4.1.2.1. Con: All ethics are situational and must be balanced against other competing ethics. No single ethic can be seen as fundamental over all others.
+1.5.3.5.1.5. Pro: -> See 1.1.1.
+1.5.3.5.1.6. Con: Herd immunity puts evolutional pressure on viruses to escape herd immunity. This makes them potentially more dangerous by causing antigenic shift.
+1.5.3.5.1.6.1. Con: Environmental pressures do not "cause" mutations. [DNA mutation occurs spontaneously](https://www.ncbi.nlm.nih.gov/books/NBK21897/#:~:text=Spontaneous%20mutations%20arise%20from%20a,is%20examined%20in%20Chapter%2020.) at a background rate, unless exposed to mutagens \(like ionizing radiation\). Evolutionary/ Environmental pressures only select for the "fittest" strains from among the spontaneously occurring mutations.
+1.5.3.5.1.6.2. Con: Historically, the rate of antigenic shift has not been affected by vaccination.
+1.5.3.5.1.6.2.1. Pro: Smallpox is eradicated, and polio is close to being eradicated, because the organisms did not mutate fast enough to "get ahead of" the vaccine.
+1.5.3.5.1.6.2.2. Pro: Flu strains change every year, but there is no evidence that they are changing faster or becoming more dangerous since the advent of vaccines.
+1.5.3.5.1.6.3. Con: Viruses potentially being more dangerous in the future is worth less illness and death in the present.
+1.5.3.5.1.6.4. Pro: Mass vaccination for [pertussis](https://academic.oup.com/cid/article/60/2/223/2895696) has caused antigenic drift of the bacteria so that today the dominant strain in circulation in the US lacks a key antigen component of the vaccine and it is therefore vaccine resistant.
+1.5.3.5.1.6.4.1. Pro: According to the CDC, vaccinated individuals are [more likely](https://academic.oup.com/cid/article/60/2/223/2895696) to be infected with this strain than unvaccinated individuals.
+1.5.3.5.1.6.4.1.1. Con: -> See 1.5.3.5.1.6.3.
+1.5.3.5.1.6.5. Pro: The heptavalent pneumococcal conjugate vaccine caused antigenic shift that led to replacement invasive pneumococcal diseases for children [in Alaska.](https://www.ncbi.nlm.nih.gov/pubmed/17456820?dopt=AbstractPlus)
+1.5.3.5.1.6.6. Pro: Vaccines that keep hosts alive but still allow transmission could thus allow very [virulent strains](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002198) to circulate in a population.
+1.5.3.5.1.6.6.1. Con: There's no good evidence that the singular case in that study generalizes well to any of the vaccines currently on the schedule.
+1.5.3.5.1.6.7. Con: Antigenic shift does not negate the use of medicines such as vaccines/antibiotics.
+1.5.3.5.1.6.8. Con: An inevitable result of [evolutionary selection](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4223060/) or elimination of a particular pathogen will give rise to antigen shift.
+1.5.3.5.1.6.9. Pro: Some vaccines are causing [strain replacement](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2405901/).
+1.5.3.5.1.6.10. Pro: Mass vaccination for Hib has caused [antigenic drift](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3322072/) so that vaccine resistant strains are more dominant.
+1.5.3.5.1.6.10.1. Con: The above citation \(compare footnotes [6](https://pubmed.ncbi.nlm.nih.gov/1314530/) & [7](https://pubmed.ncbi.nlm.nih.gov/17304452/)\) says that invasive H Flu became much less common as vaccine-preventable strains were diminished. Of the remaining infections, a higher *percentage* occurred in adults, since the *absolute number* of cases previously occurring in kids was diminished\(The HIB vaccine is only given to kids.\) This is the mathematical result of decreasing one variable.
+1.5.3.5.1.6.10.2. Con: -> See 1.5.3.5.1.6.1.
+1.5.3.5.1.6.10.3. Pro: This has simply shifted the risk burden away from those in whom it is well tolerated onto those in whom there is a higher risk of complications.
+1.5.3.5.1.7. Con: -> See 1.5.3.5.1.1.2.
+1.5.3.5.1.8. Con: Mass vaccination for measles has destroyed the natural herd immunity that existed for the disease.
+1.5.3.5.1.8.1. Con: The immunity provided by vaccines is apparently superior, since [new cases have dropped dramatically](http://vk.ovg.ox.ac.uk/measles) since the introduction of vaccinations for measles.
+1.5.3.5.1.9. Con: Not all vaccines create herd immunity.
+1.5.3.5.1.9.1. Pro: Herd immunity is only relevant for diseases that are transmitted person-to-person. Thus, [tetanus vaccine](https://vk.ovg.ox.ac.uk/vk/tetanus#:~:text=Because%20the%20infection%20comes%20from,needs%20to%20be%20individually%20protected.) cannot produce herd immunity.
+1.5.3.5.1.9.2. Pro: Mass vaccination for pertussis can actually put infants at [greater risk](http://www.pnas.org/content/111/2/787). The vaccine does not create herd immunity as vaccinated individuals can still carry and spread the disease.
+1.5.3.5.1.9.2.1. Pro: Individuals vaccinated for pertussis who still carry disease, are likely to be [asymptomatic](http://www.pnas.org/content/111/2/787), so families don't know to keep older siblings away from the baby in the family. This puts infant siblings at risk.
+1.5.3.5.1.9.3. Pro: The inactivated polio vaccine does not prevent transmission of the disease and therefore cannot create herd immunity.[nejm.org](http://www.nejm.org/doi/full/10.1056/NEJMoa054960)
+1.5.3.5.1.9.4. Pro: The HepB vaccine does not create herd immunity. It is a sexually transmitted disease, or transmitted through shared needles.
+1.5.3.5.1.9.4.1. Con: Method of transmission has nothing to do with herd immunity.
+1.5.3.5.1.9.4.1.1. Con: The suggestion that the means by which a virus or bacteria is spread from one person to another doesn't have anything to do with how a population builds up herd immunity is prima facie nonsense.
+1.5.3.5.1.9.4.1.2. Pro: Herd immunity is about knowing that there are enough members of the population that are immune that any outbreaks caused from outside will fizzle out because most members of the population are immune.
+1.5.3.5.1.10. Pro: Without sufficient vaccination rates, diseases cannot be eradicated, meaning that the pathogens which cause them can mutate, creating new strains which can also infect previously vaccinated people. Low vaccine uptake puts the entire population at risk.
+1.5.3.5.2. Pro: Society has a right to require that people minimize death and disease where possible.
+1.5.3.5.3. Con: -> See 1.3.8.
+1.5.3.6. Con: In the case of vaccines, parents are not just making a decision on behalf of their child, but on behalf of numerous other people that child comes into contact with and could potentially infect.
+1.5.4. Con: There are too many vaccines to say children should get all. Just read CDC's report on death after vaccines each year please.
+1.5.4.1. Pro: [France](https://www.thelocal.fr/20170705/these-are-the-eleven-vaccines-that-will-be-compulsory-in-france-from-2018) & [Italy](https://www.independent.co.uk/news/world/europe/italyvaccines-mandatory-school-children-combat-anti-scientific-theories-a7746111.html) have set 10-12 vaccines to attend school.
+1.5.4.2. Con: The fact that it wouldn't be reasonable to mandate every vaccine in existence does not mean that at least some of them should not be mandatory.
+1.5.5. Pro: If a parent deliberately withheld any other form of medicine from their child, they would most likely be prosecuted for neglect.
+1.6. Pro: -> See 1.5.3.5.1.
+1.7. Con: Substantial population growth caused by vaccines may have a negative impact on the environment.
+1.7.1. Pro: Since the first vaccine was developed in 1796, a [huge number](http://www.immunize.org/timeline/) of diseases have become preventable through vaccinations.
+1.7.2. Pro: One of the causes of [human overpopulation](https://www.conserve-energy-future.com/causes-effects-solutions-of-overpopulation.php) has been the decline in human death rates. Vaccinations have had a [huge effect](http://teachersinstitute.yale.edu/curriculum/units/1998/7/98.07.02.x.html) in reducing these rates, and increasing human population.
+1.7.2.1. Pro: Vaccines are [reported](https://www.huffingtonpost.com/entry/heres-how-many-lives-vaccines-save-each-year_us_57278a3ee4b01a5ebde634c0) to avoid 2-3 million deaths per year.
+1.7.3. Con: Young children, older people and people with compromised immune systems should not be considered collateral damage in the fight against climate change.
+1.7.4. Con: There are many ways to incentivize reduced population growth without causing widespread death of existing populations.
+1.8. Con: Mandatory vaccines would infringe upon individuals' human rights.
+1.8.1. Pro: -> See 1.3.2.3.
+1.8.2. Pro: Mandatory vaccinations would impose on people's [right](http://fra.europa.eu/en/charterpedia/article/3-right-integrity-person) to bodily integrity.
+1.8.2.1. Con: -> See 1.5.3.5.2.
+1.8.2.2. Pro: One cannot force another to take part in any health activity.
+1.8.2.2.1. Pro: People are permitted to smoke, drink, and pursue other activities that are dangerous to their health.
+1.8.2.2.2. Pro: Mandatory vaccination takes away an individual's right to choose with informed consent, and without informed consent it is medically unethical to force a medicine, medical procedure, or surgery upon the patient.
+1.8.2.2.3. Con: This is untrue - the law already provides for enforced medical treatment where lack of this treatment risks the lives of others \(e.g. a person who becomes violent as a result of psychological illness can be 'sectioned' under the Mental Health Act\).
+1.8.2.3. Pro: Mandatory vaccination violates the right to informed consent.
+1.8.2.3.1. Con: -> See 1.5.3.5.1.4.1.
+1.8.2.3.2. Pro: The [right to informed consent](https://www.emedicinehealth.com/informed_consent/article_em.htm#what_is_informed_consent) is one of the most fundamental tenets of medical ethics.
+1.8.2.3.2.1. Pro: -> See 1.8.2.2.2.
+1.8.2.3.3. Pro: People who support violating individuals' right to informed consent are adopting the standard employed by the Nazis to [experiment on humans](https://en.wikipedia.org/wiki/Nazi_human_experimentation) during WWII.
+1.8.2.3.3.1. Con: There's a significant ethical difference between experimenting on prisoners and society looking at evidence and deciding that, collectively, we need to work together to reduce death and disease.
+1.8.2.3.3.2. Con: Public safety is more important than the individual consent, especially in cases where the dissenting opinion has proven to be false and it is harmful to others.
+1.8.2.4. Con: Mandatory vaccination would primarily \(or, depending on the specific law, only\) affect young children, who already have all of their medical decisions made for them by adults.
+1.8.2.5. Con: Knowingly putting a child at risk of contracting a deadly disease is arguably a greater violation of bodily autonomy than vaccinating them.
+1.8.2.6. Con: An individual has a right to life. Their parents do not have the right to unreasonably risk this right.
+1.8.2.7. Con: Quarantine is morally justifiable, and vaccination is less intrusive than this.
+1.8.2.8. Con: Spreading preventable communicable diseases is a violation of the rights of other's personal bodily integrity.
+1.8.3. Pro: -> See 1.8.2.3.
+1.8.4. Con: -> See 1.5.3.5.2.
+1.8.5. Con: Human rights are contingent on the protection of other people's safety. Not vaccinating is unsafe for yourself and others.
+1.8.5.1. Con: Human rights are human right, regardless of how safe or unsafe it is, the human has the right to decide what he wants to do with his own body. If you're afraid of someone carrying a disease you can simply vaccinate yourself to be immune to it.
+1.8.5.2. Pro: An individual's right to decline a vaccine is more than outweighed by another individual's right to live free of infectious disease.
+1.8.5.3. Con: The risk profile of not vaccinating is so small that it does not warrant the suspension of one's human rights to mitigate such risk.
+1.8.6. Con: The right to refuse medical intervention can already be overridden in circumstances where this refusal creates risk for others \(e.g. sectioning of high-risk mental health patients, or isolation of people with dangerous infectious diseases\). The same precedent could easily be applied to vaccination.
+1.8.6.1. Con: Just because there is a risk for something to happen doesn't mean you force someone do something against their will. On the same logic every fastfood using at least a ingredient that has a risk of any kind of health problems should be banned.
+1.8.7. Con: One could use the same logic to claim murderers should not be incarcerated as that infringes their right to freedom. It is easy to raise a sentimental response, much more so than perform a concise exchange of arguments. That is fundamentally the root of this debate. How can statistical certainty compare to the sentiment a hurt child provokes? However the exact same logical fallacies characterise both arguments, as it is not a matter of opinion as much as a competition between fact and sentiment.
+1.8.7.1. Con: This is not relevant here as it is based on a false assumption. Nobody should ever be incarcerated \(for any possible reason\) because that indeed infringes their right to freedom.
+1.9. Con: Vaccines should only be mandatory if they are also free, otherwise this places an unjust burden on low-income families which essentially punishes parents for being poor.
+1.9.1. Con: It is possible to get [free or low cost](https://www.verywellhealth.com/free-vaccines-low-cost-vaccines-2633696) vaccinations.
+1.9.2. Con: The cost of vaccines is low and governments are the main beneficiaries of herd immunity. Income should not be part of the equation regarding vaccination.
+1.10. Con: Enforcing vaccination will antagonize parents against governments and pharmaceutical companies and will lead to a more reduced amount of vaccinated children.
+1.10.1. Con: It is the responsibility of every government to inform the public and relieve society from such pressures.
+1.10.2. Con: Offering free vaccines will defuse any talk of for-profit motivation behind immunization.
+1.10.2.1. Con: It will work only if the pharmaceutical industry offer them, not if they are paid by the state with taxpayer's money.
+1.11. Pro: Evidence suggests vaccines are an effective means of protecting people from disease.
+1.11.1. Pro: Vaccines are [recommended](http://oktoaskvt.org/why-do-doctors-recommend-these-vaccines/) by the vast majority of paediatricians.
+1.11.1.1. Con: [13% of pediatricians](http://file.scirp.org/html/22932.html) don't follow the CDC vaccination schedule for their own children.
+1.11.1.1.1. Con: It follows, therefore, that 87% do, which definitely constitutes "the vast majority".
+1.11.2. Con: There are no randomized, placebo controlled studies of long term health outcomes of children who receive the full CDC childhood schedule and unvaccinated children.
+1.11.2.1. Con: It would be clinically meaningless to design & implement a case-control, prospective study of "all vaccines" vs "no-vaccines." Every new development is proposed to be implemented onto the backdrop of current reality. Each currently recommended vaccine has been studied individually against the then-current recommendations. \(When HPV was being studied in the 1990s, both arms of the study would have had their routinely-recommended MMRs, for example\).
+1.11.2.2. Con: Studies of long-term health outcomes are not justified in the face of proven short-term decreases in serious outcomes like death or paralysis
+1.11.2.3. Con: That study would be unethical. Without clinical equipoise we can't ethically randomize people into a placebo arm.
+1.11.2.3.1. Con: It is not unethical to do proper safety studies to gain reasonable assurances that a medical intervention is safe. It is unethical to not do proper safety studies and use the entire population as guinea pigs in a massive experiment.
+1.11.2.3.2. Pro: If there's any good evidence that one wing of a study is more beneficial than the other then it's unethical to randomize people into it.
+1.11.2.3.2.1. Con: This argument demonstrates the fallacy of begging the question. One cannot "know" that the benefits of the vaccine outweigh the risks if the proper studies, necessary to be able to determine that with any reasonable certainty, haven't been done.
+1.11.2.4. Pro: Mandatory vaccination makes our children subjects of a grand experiment with potentially disastrous outcomes.
+1.11.2.5. Con: They have been researched to the level that institutional review boards and researchers are convinced. The professionals involved are the only people qualified to make that call and they've made it.
+1.11.2.6. Con: -> See 1.3.6.1.
+1.11.3. Pro: The current vaccine schedule is very much [evidence based](https://www.bmj.com/content/352/bmj.i867).
+1.11.4. Con: It does not follow from the premise that vaccines are effective that therefore they ought to be mandatory.
+1.11.4.1. Pro: There are many other health interventions that, while effective, are not mandatory.
+1.11.4.2. Pro: -> See 1.8.2.
+1.11.4.3. Con: Mandates for seatbelts in vehicles, or for PPE in the workplace, have been hugely successful in reducing fatalities and injuries.
+1.11.4.3.1. Con: But you can find many counter-examples as well. For example, antibiotics are highly effective, but no doctor will force you to take them if you have an infection.
+1.11.5. Pro: -> See 1.7.2.1.
+1.11.6. Pro: Vaccinations have helped eradicate a number of diseases.
+1.11.6.1. Pro: Millions of people have been vaccinated with the [polio vaccine](http://www.who.int/features/factfiles/polio/en/) and the number of polio cases per year is nearly 0.
+1.11.6.2. Pro: Vaccinations have already proven effective at completely eradicating diseases such as [small pox.](https://www.vox.com/cards/vaccines/what-diseases-have-vaccines-eradicated)
+1.11.6.2.1. Con: There are no guarantees that smallpox would still be endemic in the US today even if no vaccines had been administered.
+1.11.6.2.1.1. Pro: Advances in health care, sanitation, nutrition, etc., can account for the decline in communicable diseases seen during the 20th century.
+1.11.6.3. Con: Many diseases that were once endemic are now eradicated or extremely rare despite the fact no mass vaccination campaigns ever existed for them.
+1.11.6.3.1. Pro: Bubonic plague is much less common due to improved [sanitation and control of rats](https://www.cdc.gov/plague/transmission/index.html).
+1.11.6.3.2. Pro: Leprosy has been [drastically reduced wordwide](https://www.who.int/news-room/fact-sheets/detail/leprosy#:~:text=There%20were%20208%20619%20new,corresponds%20to%200.2%2F10%20000.) due to aggressive surveillance and drug treatment.
+1.11.6.3.3. Pro: The CDC is famous for successfully eradicating [malaria](https://www.cdc.gov/malaria/about/history/index.html) in the southern United States.
+1.11.6.4. Pro: The eradication of such diseases can help to preserve human life and is crucial for avoiding epidemics which kill thousands of people. These vaccinations are therefore benefit all.
+1.11.7. Con: A vaccine that shifts infection towards the asymptomatic range could increase the rate of spread of the infection, due to changes in risk aversion. [Studying the Efficacy and Perception of Whooping Cough Vaccines](https://osf.io/8uhpb/)

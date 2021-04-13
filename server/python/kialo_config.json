@@ -4,9 +4,96 @@
             "id": "drugs",
             "topic": "Drugs",
             "text": "All drugs should be legalised.",
-            "data_path": "kialoData/all-drugs-should-be-legalized-7100_cleaned.txt",
-            "stances_path": "kialoData/all-drugs-should-be-legalized-7100_stances.txt",
-            "sbert_path": "kialoData/sbert/sbert_vecs_drugs.pkl"
+            "datasets": [
+                {
+                    "data_path": "kialoData/all-drugs-should-be-legalized-7100_cleaned.txt",
+                    "stances_path": "kialoData/all-drugs-should-be-legalized-7100_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_drugs.pkl"
+                }
+            ]
+        },
+        {
+            "id": "brexit",
+            "topic": "Brexit",
+            "text": "Brexit: Was it a good choice for the UK?",
+            "datasets": [
+                {
+                    "data_path": "kialoData/brexit-was-it-a-good-choice-for-the-uk-4237_cleaned.txt",
+                    "stances_path": "kialoData/brexit-was-it-a-good-choice-for-the-uk-4237_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_brexit1.pkl"
+                }, 
+                {
+                    "data_path": "kialoData/brexit-will-have-a-positive-effect-on-the-political-life-of-the-european-union-33676_cleaned.txt",
+                    "stances_path": "kialoData/brexit-will-have-a-positive-effect-on-the-political-life-of-the-european-union-33676_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_brexit2.pkl"
+                }
+            ]
+        },
+        {
+            "id": "veganism",
+            "topic": "Veganism",
+            "text": "All Humans Should Be Vegan.",
+            "datasets": [
+                {
+                    "data_path": "kialoData/all-humans-should-be-vegan-2762_cleaned.txt",
+                    "stances_path": "kialoData/all-humans-should-be-vegan-2762_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_veganism.pkl"
+                },
+                {
+                    "data_path": "kialoData/veganism-is-a-natural-right-34047_cleaned.txt",
+                    "stances_path": "kialoData/veganism-is-a-natural-right-34047_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_veganism2.pkl"
+                },
+                {
+                    "data_path": "kialoData/should-people-go-vegan-if-they-can-31640_cleaned.txt",
+                    "stances_path": "kialoData/should-people-go-vegan-if-they-can-31640_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_veganism3.pkl"
+                },
+                {
+                    "data_path": "kialoData/the-ethics-of-eating-animals-is-eating-meat-wrong-1229_cleaned.txt",
+                    "stances_path": "kialoData/the-ethics-of-eating-animals-is-eating-meat-wrong-1229_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_veganism4.pkl"
+                }
+            ]
+        },
+        {
+            "id": "vaccination",
+            "topic": "Vaccination",
+            "text": "Should COVID-19 Vaccines be Mandatory?",
+            "datasets": [
+                {
+                    "data_path": "kialoData/should-covid-19-vaccines-be-mandatory-39517_cleaned.txt",
+                    "stances_path": "kialoData/should-covid-19-vaccines-be-mandatory-39517_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_vaccine.pkl"
+                }, 
+                {
+                    "data_path": "kialoData/should-vaccinations-be-mandatory-7233_cleaned.txt",
+                    "stances_path": "kialoData/should-vaccinations-be-mandatory-7233_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_vaccine2.pkl"
+                },
+                {
+                    "data_path": "kialoData/it-should-be-compulsory-for-those-working-with-the-elderly-to-take-a-covid-19-vaccine-43842_cleaned.txt",
+                    "stances_path": "kialoData/it-should-be-compulsory-for-those-working-with-the-elderly-to-take-a-covid-19-vaccine-43842_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_vaccine3.pkl"
+                },
+                {
+                    "data_path": "kialoData/do-we-need-a-vaccine-to-fight-covid-19-38268_cleaned.txt",
+                    "stances_path": "kialoData/do-we-need-a-vaccine-to-fight-covid-19-38268_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_vaccine4.pkl"
+                }
+            ]
+        },
+        {
+            "id": "parent_license",
+            "topic": "Parent License",
+            "text": "Should a license be required in order to have a child (procreate)?",
+            "datasets": [
+                {
+                    "data_path": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt",
+                    "stances_path": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_stances.txt",
+                    "sbert_path": "kialoData/sbert/sbert_vecs_parent_license.pkl"
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,57 @@
+ Discussion Title: Do we need a vaccine to fight Covid-19?
+
+1. We need a vaccine to fight Covid-19.
+1.1. Pro: Vaccines protect us from diseases by giving us immunity without getting sick.
+1.1.1. Pro: Vaccination is the safest and most effective way to achieve 'herd immunity'
+1.1.1.1. Pro: Herd immunity [protects groups in the community](https://vk.ovg.ox.ac.uk/vk/herd-immunity) who are particularly vulnerable to diseases, but often cannot safely receive vaccines.
+1.1.1.2. Con: The concept of 'herd immunity' is being discussed as flawed.
+1.1.1.2.1. Con: Herd immunity [does not give](https://vk.ovg.ox.ac.uk/vk/herd-immunity) a high level of individual protection to a person.
+1.1.2. Con: A vaccine only protects those who are willing to take it from the disease. Many people will not be willing to take a vaccine.
+1.1.2.1. Pro: [5% of people](https://ourworldindata.org/support-for-vaccination) across the world disagree that vaccines are safe.
+1.1.2.2. Pro: [7%](https://ourworldindata.org/support-for-vaccination) of the global population disagree that vaccines are safe.
+1.1.2.3. Con: Governments can implement measures which mandate the population to take vaccines.
+1.2. Con: It will be difficult to procure vaccines in suitable amounts.
+1.2.1. Con: [mRNA technology](https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/mrna.html) is currently being used to manufacture and ship vaccines from [Pfizer](https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Pfizer-BioNTech.html) and [other vaccine manufacturers](https://www.bbc.com/news/world-us-canada-56226979) who are currently being contracted to supply the COVID-19 vaccines.
+1.3. Con: [Lockdowns are also effective in fighting COVID-19, potentially saving millions of lives.](https://www.reuters.com/article/uk-factcheck-lockdowns/fact-check-studies-show-covid-19-lockdowns-have-saved-lives-idUSKBN2842WS)
+1.3.1. Pro: Just by social distancing and not coming in contact with others outside your family, this pandemic can be stopped.
+1.4. Pro: It is not sure whether people become immune to Covid-19 after contracting the disease and recovering.
+1.4.1. Pro: According to the [WHO](https://www.who.int/news-room/commentaries/detail/immunity-passports-in-the-context-of-covid-19#:~:text=There%20is%20currently%20no%20evidence,multi%2Dstep%20process.), "there is currently no evidence that people who have recovered from Covid-19 and have antibodies are protected from a second infection."
+1.4.2. Con: [Studies](https://www.the-scientist.com/news-opinion/studies-report-rapid-loss-of-covid-19-antibodies-67650) show that Covid-19 recovered patients lose their immunity within weeks or months after recovery.
+1.4.3. Con: There have been instances of [reinfection](https://mmnews.tv/pakistan-confirms-first-reinfection-case-of-coronavirus/) among those who have fully recovered from Covid-19.
+1.4.3.1. Con: There might be [other explanations](https://news.cgtn.com/news/2020-05-17/Can-coronavirus-patients-get-reinfected-after-full-recovery--QyWAzhfpni/index.html) for fully recovered patients testing positive for Covid-19 again.
+1.5. Con: There are other medical alternatives to tackle the Covid-19 Pandemic.
+1.5.1. Con: Although there are medical alternatives to tackling Covid-19, this does not itself prove that they are superior alternatives to vacciniation.
+1.5.2. Con: Vaccines are a pre-emptive defense that can save people pain by [ensuring that](https://www.cdc.gov/vaccines/hcp/conversations/downloads/vacsafe-understand-color-office.pdf), if infected, they are able to fight off the virus without suffering any serious symptoms \(p.1\).
+1.5.3. Pro: [Sufficient vitamin D levels](https://www.medrxiv.org/content/10.1101/2020.09.04.20188268v1) are associated with decreased risk for Covid-19 infection, much lower ICU admissions and mortality.
+1.5.4. Pro: Plasma therapy has been showing [favorable results](https://www.firstpost.com/health/coronavirus-outbreak-what-is-plasma-therapy-is-it-the-miracle-cure-the-world-has-been-waiting-for-8254311.html) in many countries.
+1.5.4.1. Con: Plasma therapy only provides immunity for a [short period of time](https://edition.cnn.com/2020/06/26/health/antibody-therapies-covid-19-update-wellness/index.html). Vaccines provide long term immunity.
+1.5.4.2. Pro: In Pakistan, passive immunization using plasma therapy has shown [successful results in clinical trials](https://tribune.com.pk/story/2218046/1-pakistans-first-covid-19-patient-recovers-plasma-therapy/?amp=1).
+1.5.4.3. Pro: [India](https://www.news18.com/news/india/plasma-therapy-to-treat-serious-covid-19-patients-at-rajasthan-hospital-shows-promising-results-2613951.html) has started using plasma therapy to treat seriously infected Covid-19 patients, and the treatment has shown successful results.
+1.5.4.4. Con: Plasma therapy or transfusion has [medical risks and side effects](https://pubmed.ncbi.nlm.nih.gov/16377549/).
+1.5.5. Pro: Anti-inflammatories can reduce the body’s violent reaction in trying to fight off the virus \(that can cause serious harm and even death\).
+1.5.6. Pro: Some existing antivirals could have some useful effect against the novel Coronavirus. These include [Remdesivir](https://www.nejm.org/doi/full/10.1056/NEJMoa2007016), [Lopinavir-Ritonavir](https://www.nejm.org/doi/full/10.1056/NEJMoa2001282), [Chloroquine and hydroxychloroquine](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7152897/).
+1.6. Con: It is more convenient to keep monitoring, testing, contact tracing and adopting social distancing methods.
+1.6.1. Pro: With cheap rapid antigen tests \(currently about $5 - but could be below $1 probably given the fact that similar malaria tests can cost 50 cents\) we can do really mass testing and eradicate the virus. Here is a website advocating for that: [rapidtests.org](https://www.rapidtests.org/)
+1.6.2. Con: The success of social distancing methods rely on [a lot of assumptions](https://www.cebm.net/covid-19/what-is-the-evidence-to-support-the-2-metre-social-distancing-rule-to-reduce-covid-19-transmission/), which might not be true.
+1.6.3. Pro: [New Zealand](https://www.nationalgeographic.com/travel/2020/04/what-new-zealand-did-right-in-battling-coronavirus/) was able to effectively fight and eliminate the Coronavirus through strict monitoring and testing.
+1.6.3.1. Con: The success of New Zealand’s Coronavirus elimination strategy is [unlikely to deliver the same results in other countries](https://time.com/5824042/new-zealand-coronavirus-elimination/).
+1.6.3.1.1. Pro: New Zealand's testing capacity, [2,190 tests per 100,000 people](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases), is far beyond the administrative reach of many countries.
+1.6.3.1.1.1. Pro: South Korea — which has a [much larger outbreak](https://time.com/5789596/south-korea-coronavirus-outbreak/) compared to New Zealand and made testing [widely available](https://time.com/5804899/u-s-coronavirus-needs-follow-s-korea/) — has a testing rate of [1,140 per 100,000 people](https://www.cdc.go.kr/board/board.es?mid=a30402000000&bid=0030).
+1.6.3.1.1.2. Pro: According to [data from the COVID Project](https://covidtracking.com/data), the United States has only been able to administer 1,420 tests per 100,000 people.
+1.6.3.1.2. Pro: The population density of New Zealand, which is essential to control the spread of the virus, is [extremely low](https://time.com/5824042/new-zealand-coronavirus-elimination/) compared to other countries.
+1.6.3.1.2.1. Pro: Only [1.66 million people live in Auckland](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-plans-strategies/auckland-plan/about-the-auckland-plan/Pages/aucklands-population.aspx), the biggest city of New Zealand. Its population density is less than one-twentieth of [New York City](https://en.wikipedia.org/wiki/Demographics_of_New_York_City).
+1.6.4. Con: Social distancing and other recovery methods for Covid-19 do not provide immunity from the virus. Thus, we need something for the long run.
+1.7. Pro: Without a vaccine there will always be a risk that new outbreaks of the disease will emerge.
+1.7.1. Con: This risk persists even with a vaccine, like in the case of influenza. A vaccine might have to take into account [different strains](https://www.cdc.gov/flu/prevent/quadrivalent.htm) of a virus.
+1.8. Pro: A vaccine would be better for the economy of affected countries.
+1.8.1. Pro: A vaccine will allow the US to reduce or eliminate time and resources currently spent on testing and treatment and refocus them on economic recovery and longer term preventative measures to improve our national readiness for future viral outbreaks.
+1.9. Con: A vaccine-induced dependency, even a symbolic one of humankind on medicine might be detrimental.
+1.9.1. Con: We are already dependent on vaccines.
+1.9.1.1. Pro: People have [many different vaccines](https://www.cdc.gov/vaccines/vpd/vaccines-age.html) administered throughout their lives to protect themselves from diseases that would otherwise be fatal.
+1.10. Con: The virus may mutate, making the vaccine redundant.
+1.10.1. Con: According to the scientists studying the virus, the rate of mutation is [slow enough](https://www.washingtonpost.com/health/the-coronavirus-isnt-mutating-quickly-suggesting-a-vaccine-would-offer-lasting-protection/2020/03/24/406522d6-6dfd-11ea-b148-e4ce3fbd85b5_story.html) that an effective vaccine can be developed.
+1.10.2. Con: A virus' ability to mutate is not a valid reason to stop making a vaccine. Once the base formula is perfected, it can simply be tweaked to adjust to the mutations.
+1.10.3. Pro: The COVID-19 virus won't stay the same forever. A vaccine made for the current COVID-19 strand will be less effective if anything about the virus changes.
+1.10.4. Pro: There is no telling how the virus will mutate or what it will mutate into. For all we know, the pandemic may last a while even with a vaccine present.
+1.10.5. Pro: Scientists have reported that the Coronavirus is [slowly mutating](https://www.sciencemag.org/news/2020/07/pandemic-virus-slowly-mutating-it-getting-more-dangerous).
+1.10.5.1. Con: These mutations are extremely slow and occur in specific regions of the virus. A vaccine would be specific to the more stable part of the virus.

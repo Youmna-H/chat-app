@@ -41,7 +41,7 @@ def clean_up_data(path, output_path):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-pre", "--pre_path", dest="pre_path", type=str, required=False, default="", help="Need to set to python/ when running from the server") #default is false in case of loading a pretrained model, and just testing on test set
-	parser.add_argument("-d", "--dataset", dest="dataset", type=str, choices=["drugs"], required=False, default="drugs", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
+	parser.add_argument("-d", "--dataset", dest="dataset", type=str, required=False, default="drugs", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	# parser.add_argument("-p", "--data_path", dest="data_path", type=str, required=False, default="/Users/youmna/Documents/OUM2021/MoralMazeData/Money", help="The path to the data, could be one file or a directory") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-m", "--sim_model", dest="sim_model", choices=['word2vec', 'glove', 'tfidf', 'sbert'], type=str, required=False, default="tfidf", help="The similarity model") #default is false in case of loading a pretrained model, and just testing on test set
 	parser.add_argument("-q", "--query", dest="query", type=str, required=True, default="", help="User's query") #default is false in case of loading a pretrained model, and just testing on test set
@@ -50,9 +50,9 @@ if __name__ == "__main__":
 	parser.add_argument("-rr", "--responses_to_response", dest="responses_to_response", choices = ["arg","arg_response"], type=str, required=False, default="arg", help="Set to arg_response if you want to return the responses to the retrieved most similar utterances") #default is false in case of loading a pretrained model, and just testing on test set
 
 	args = parser.parse_args()
-	data_path = ""
-	vec_path = ""
-	stances_path = ""
+	data_path = []
+	vec_path = []
+	stances_path = []
 	start = False
 	topic = ""
 	vectors, most_similar,  most_similar_pro, most_similar_con = [], [], [], []
@@ -69,60 +69,68 @@ if __name__ == "__main__":
 	text_to_stance_lower = {}
 	# pre_path = ""
 	#uncomment to clean up the data and generate "_cleaned" file, clean up is sometimes required because some kialo files have errors (e.g., endline errors)
-	# clean_up_data(pre_path + "kialoData/all-drugs-should-be-legalized-7100.txt", pre_path + "kialoData/all-drugs-should-be-legalized-7100_cleaned.txt")
+	clean_up_data(pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368.txt", pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt")
 	config_path = pre_path + "kialo_config.json"
 	with open(config_path) as f:
 		config = json.load(f)
 		for c in config["topics"]:
 			if args.dataset == c["id"]:
-				data_path = pre_path + c["data_path"]
-				vec_path  =  pre_path  + c["sbert_path"]
-				stances_path =  pre_path + c["stances_path"]
+				datasets = c["datasets"]
+				for d in datasets:
+					data_path.append(pre_path + d["data_path"])
+					vec_path.append(pre_path  + d["sbert_path"])
+					stances_path.append(pre_path + d["stances_path"])
 	
-	with open(stances_path) as f:
-		for line in f:
-			parts = line.strip().split('\t')
-			id_to_stances[parts[0]] = parts[1]
+	#read stances
+	for i,s in enumerate(stances_path):
+		with open(s) as f:
+			for line in f:
+				parts = line.strip().split('\t')
+				id_to_stances[str(i)+"_"+parts[0]] = parts[1] #add file index before id
 	
-	if data_path == "":
+	if data_path == []:
 		print("Incorrect topic!!!!")
 
+	#read data files
 	lens = []
-	with open(data_path) as f:
-		for line in f:
-			if line.startswith("1. "):
-				start = True
-				topic = line.strip().split(" ",1)[1]
-				id_to_claim["1."] = topic.lower()
-				responses_to_claims[topic.lower()] = []
-				continue
-			if start and line.strip() != "":
-				parts = line.strip().split(" ",2)
-				if len(parts) < 3:
+	for file_index, path in enumerate(data_path):
+		start = False
+		with open(path) as f:
+			for line in f:
+				if line.startswith("1. "):
+					start = True
+					topic = line.strip().split(" ",1)[1]
+					id_to_claim[str(file_index)+"_"+"1."] = topic.lower()
+					responses_to_claims[topic.lower()] = []
 					continue
-				text = parts[2].lower()
-				
-				# words = word_tokenize(text)
-				# lens.append(len(words))
-				if text.startswith("-> see"):
-					ref = text.split()[-1]
-					text = id_to_claim[ref]
-				else:
-					lowercase_to_uppercase[text] = parts[2]
-				texts.append(text)
-				stance = id_to_stances[parts[0]]
-				if stance == 'pro':
-					texts_pro.append(text)
-					text_to_stance_lower[text] = "pro"
-				else:
-					texts_con.append(text)
-					text_to_stance_lower[text] = "con"
-				
-				responses_to_claims[text] = []
-				id_to_claim[parts[0]] = text
-				initial_claim_id  = ".".join(parts[0].split(".")[:-2]) + "."
-				initial_claim = id_to_claim[initial_claim_id]
-				responses_to_claims[initial_claim].append({"stance":parts[1].lower()[:-1],"text":text})
+				if start and line.strip() != "":
+					parts = line.strip().split(" ",2)
+					if len(parts) < 3:
+						continue
+					text = parts[2].lower()
+					
+					# words = word_tokenize(text)
+					# lens.append(len(words))
+					if text.startswith("-> see 1"):
+						ref = str(file_index)+"_"+text.split()[-1]
+						text = id_to_claim[ref]
+					else:
+						lowercase_to_uppercase[text] = parts[2]
+					texts.append(text)
+					_id = str(file_index)+"_"+parts[0]
+					stance = id_to_stances[_id]
+					if stance == 'pro':
+						texts_pro.append(text)
+						text_to_stance_lower[text] = "pro"
+					else:
+						texts_con.append(text)
+						text_to_stance_lower[text] = "con"
+					
+					responses_to_claims[text] = []
+					id_to_claim[_id] = text
+					initial_claim_id  = ".".join(_id.split(".")[:-2]) + "."
+					initial_claim = id_to_claim[initial_claim_id]
+					responses_to_claims[initial_claim].append({"stance":parts[1].lower()[:-1],"text":text})
 	texts.append(query_text)
 	texts_pro.append(query_text)
 	texts_con.append(query_text)
@@ -133,18 +141,20 @@ if __name__ == "__main__":
 	# print(np.mean(lens))
 
 	if args.sim_model == 'sbert':
-		infile = open(vec_path,'rb')
-		vectors = cPickle.load(infile)
-		infile.close()
+		vectors, vectors_pro, vectors_con = {}, {}, {}
+		for bert_path in vec_path:
+			infile = open(bert_path,'rb')
+			vectors.update(cPickle.load(infile))
+			infile.close()
 		if query_text not in vectors:
 			vectors[query_text] = utils.get_sbert_vec(query_text)
 		if args.responses_per_stance == 0:
-			most_similar = utils.most_sim_cos(vectors, query_text, args.num_responses)
+			most_similar.extend(utils.most_sim_cos(vectors, query_text, args.num_responses))
 		else:
-			vectors_pro = { d: vectors[d] for d in texts_pro }
-			most_similar_pro = utils.most_sim_cos(vectors_pro, query_text, args.num_responses)
-			vectors_con = { d: vectors[d] for d in texts_con }
-			most_similar_con = utils.most_sim_cos(vectors_con, query_text, args.num_responses)
+			vectors_pro.update({ d: vectors[d] for d in texts_pro })
+			most_similar_pro.extend(utils.most_sim_cos(vectors_pro, query_text, args.num_responses))
+			vectors_con.update({ d: vectors[d] for d in texts_con })
+			most_similar_con.extend(utils.most_sim_cos(vectors_con, query_text, args.num_responses))
 	elif args.sim_model == 'word2vec':
 		path = pre_path + "embeddings/GoogleNews-vectors-negative300.bin"
 		model = gensim.models.KeyedVectors.load_word2vec_format(path, binary=True)

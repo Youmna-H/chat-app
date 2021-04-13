@@ -1,7 +1,7 @@
 id_to_stances = {}
 if __name__ == "__main__":
     start = False
-    data_path = "kialoData/all-drugs-should-be-legalized-7100_cleaned.txt"
+    data_path = "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt"
     with open(data_path) as f:
         for line in f:
             if line.startswith("1. "):
@@ -23,6 +23,6 @@ if __name__ == "__main__":
                 else:
                     id_to_stances[_id] = "con"
     
-    fw = open("kialoData/all-drugs-should-be-legalized-7100_stances.txt", "w")
+    fw = open("kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_stances.txt", "w")
     for _id in id_to_stances:
         fw.write(_id + '\t' + id_to_stances[_id] + '\n')
