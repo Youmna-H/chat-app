@@ -127,7 +127,9 @@ const resolvers = {
 
       var dataToSend = python.stdout.toString();
       var stances =  [];
-      var responses = [];;
+      var responses = [];
+
+      console.log(dataToSend)
 
       //this is how the responses are splitted in python "###///"
       //delimeter between responses and stances is "$!$!$"

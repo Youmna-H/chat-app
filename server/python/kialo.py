@@ -69,7 +69,7 @@ if __name__ == "__main__":
 	text_to_stance_lower = {}
 	# pre_path = ""
 	#uncomment to clean up the data and generate "_cleaned" file, clean up is sometimes required because some kialo files have errors (e.g., endline errors)
-	clean_up_data(pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368.txt", pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt")
+	# clean_up_data(pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368.txt", pre_path + "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt")
 	config_path = pre_path + "kialo_config.json"
 	with open(config_path) as f:
 		config = json.load(f)
