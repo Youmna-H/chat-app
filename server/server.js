@@ -118,7 +118,7 @@ const resolvers = {
     //     console.log(error.stdout);  // Holds the stdout output. Use `.toString()`.
     //  }
 
-    // const python = execSync('python3 python/kialo.py -pre python/ -q "hi" -m sbert -rr arg_response', function(error, stdout, stderr) {
+    // const python = execSync('python3 python/kialo.py -pre python/ -q "hi" -m sbert -d veganism', function(error, stdout, stderr) {
     //     console.log(stdout);
     //     console.log(error);
     //     console.log(stderr);

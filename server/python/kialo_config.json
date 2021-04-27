@@ -16,6 +16,15 @@
             "id": "brexit",
             "topic": "Brexit",
             "text": "Brexit: Was it a good choice for the UK?",
+            "data_path_pro": "kialoData/brexit_pro.txt",
+            "data_path_con": "kialoData/brexit_con.txt",
+            "data_path_all": "kialoData/brexit_all.txt",
+            "sbert_path_pro": "kialoData/sbert/sbert_vecs_brexit_indexed_pro",
+            "sbert_path_con": "kialoData/sbert/sbert_vecs_brexit_indexed_con",
+            "sbert_path_all": "kialoData/sbert/sbert_vecs_brexit_indexed_all",
+            "sbert_path_pro_original": "kialoData/sbert/sbert_vecs_brexit_pro",
+            "sbert_path_con_original": "kialoData/sbert/sbert_vecs_brexit_con",
+            "sbert_path_all_original": "kialoData/sbert/sbert_vecs_brexit_all",
             "datasets": [
                 {
                     "data_path": "kialoData/brexit-was-it-a-good-choice-for-the-uk-4237_cleaned.txt",
@@ -33,6 +42,15 @@
             "id": "veganism",
             "topic": "Veganism",
             "text": "All Humans Should Be Vegan.",
+            "data_path_pro": "kialoData/veganism_pro.txt",
+            "data_path_con": "kialoData/veganism_con.txt",
+            "data_path_all": "kialoData/veganism_all.txt",
+            "sbert_path_pro": "kialoData/sbert/sbert_vecs_veganism_indexed_pro",
+            "sbert_path_con": "kialoData/sbert/sbert_vecs_veganism_indexed_con",
+            "sbert_path_all": "kialoData/sbert/sbert_vecs_veganism_indexed_all",
+            "sbert_path_pro_original": "kialoData/sbert/sbert_vecs_veganism_pro",
+            "sbert_path_con_original": "kialoData/sbert/sbert_vecs_veganism_con",
+            "sbert_path_all_original": "kialoData/sbert/sbert_vecs_veganism_all",
             "datasets": [
                 {
                     "data_path": "kialoData/all-humans-should-be-vegan-2762_cleaned.txt",
@@ -60,6 +78,15 @@
             "id": "vaccination",
             "topic": "Vaccination",
             "text": "Should COVID-19 Vaccines be Mandatory?",
+            "data_path_pro": "kialoData/vaccines_pro.txt",
+            "data_path_con": "kialoData/vaccines_con.txt",
+            "data_path_all": "kialoData/vaccines_all.txt",
+            "sbert_path_pro": "kialoData/sbert/sbert_vecs_vaccine_indexed_pro",
+            "sbert_path_con": "kialoData/sbert/sbert_vecs_vaccine_indexed_con",
+            "sbert_path_all": "kialoData/sbert/sbert_vecs_vaccine_indexed_all",
+            "sbert_path_pro_original": "kialoData/sbert/sbert_vecs_vaccine_pro",
+            "sbert_path_con_original": "kialoData/sbert/sbert_vecs_vaccine_con",
+            "sbert_path_all_original": "kialoData/sbert/sbert_vecs_vaccine_all",
             "datasets": [
                 {
                     "data_path": "kialoData/should-covid-19-vaccines-be-mandatory-39517_cleaned.txt",
@@ -87,11 +114,21 @@
             "id": "parent_license",
             "topic": "Parent License",
             "text": "Should a license be required in order to have a child (procreate)?",
+            "data_path_pro": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned_pro.txt",
+            "data_path_con": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned_con.txt",
+            "data_path_all": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned_all.txt",
+            "sbert_path_pro": "kialoData/sbert/sbert_vecs_parent_license_indexed_pro",
+            "sbert_path_con": "kialoData/sbert/sbert_vecs_parent_license_indexed_con",
+            "sbert_path_all": "kialoData/sbert/sbert_vecs_parent_license_indexed_all",
+            "sbert_path_pro_original": "kialoData/sbert/sbert_vecs_parent_license_pro",
+            "sbert_path_con_original": "kialoData/sbert/sbert_vecs_parent_license_con",
+            "sbert_path_all_original": "kialoData/sbert/sbert_vecs_parent_license_all",
+            
             "datasets": [
                 {
                     "data_path": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_cleaned.txt",
                     "stances_path": "kialoData/should-a-license-be-required-in-order-to-have-a-child-procreate-2368_stances.txt",
-                    "sbert_path": "kialoData/sbert/sbert_vecs_parent_license.pkl"
+                    "sbert_path": "kialoData/sbert/sbert_vecs_parent_license_indexed"
                 }
             ]
         }
