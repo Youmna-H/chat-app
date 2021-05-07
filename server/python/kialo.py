@@ -3,12 +3,12 @@ import argparse
 import os
 import gensim
 import utils
-from nltk.tokenize import word_tokenize
 from six.moves import cPickle
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import re
 import faiss_index
+import collections
 np.random.seed(123)
 
 def clean_up_data(path, output_path):
@@ -105,6 +105,64 @@ def load(topic, model_name, sub_model_name="paraphrase-distilroberta-base-v1", i
 	#responses and lowercase_to_uppercase is a dictionaries
 	return {"model": model, "pro_vecs":pro_vecs, "con_vecs":con_vecs, "texts_pro":texts_pro, "texts_con":texts_con, "responses":responses, "lowercase_to_uppercase":lowercase_to_uppercase}
 
+def calculate_parent_sim(query, model_name, model, pro_vecs, con_vecs, texts_pro, texts_con, responses, lowercase_to_uppercase, num_responses=5, classify_responses=True, responses_to_response=False, is_indexed=False, **kwargs):
+	parents = {}
+	for t in texts_pro:
+		if t in responses:
+			for r in responses[t]:
+				parents[r.lower()] = t.lower()
+	for t in texts_con:
+		if t in responses:
+			for r in responses[t]:
+				parents[r.lower()] = t.lower()
+
+	all_vecs = pro_vecs
+	all_vecs.update(con_vecs)
+	sim_map = {}
+	output = collections.OrderedDict()
+	for r in parents:
+		v1 = np.array(all_vecs[r].reshape(1,-1))
+		for t in all_vecs:
+			if t == r:
+				continue
+			v2 = np.array(all_vecs[t].reshape(1,-1))
+			sim = cosine_similarity(v1, v2)[0][0]
+			is_parent = parents[r] == t
+			if r not in sim_map:
+				sim_map[r] = []
+			sim_map[r].append({"text":t, "sim":sim, "is_parent":is_parent})
+
+	parent_ranks = []
+	other_ranks = []
+	all_ranks = []
+	parent_sim = []
+	other_sim = []
+	all_sim = []
+	for r in sim_map:
+		newlist = sorted(sim_map[r], key=lambda k: k['sim'], reverse=True) 
+		# sim_map[r] = newlist
+		for i, item in enumerate(newlist):
+			if item['is_parent']:
+				#paraphrase-distilroberta-base-v1
+				parent_ranks.append(i) 
+				parent_sim.append(item['sim']) 
+				# print("%i/%i" % (i, len(newlist)))
+			else:
+				other_ranks.append(i) 
+				other_sim.append(item['sim']) 
+			all_ranks.append(i) #356.894024
+			all_sim.append(item['sim']) #0.296818
+
+	print("# parent child comparisons = %f" % len(parent_ranks))
+	print("# other comparisons = %f" % len(other_ranks))
+	print("parent mean rank = %f" % np.mean(parent_ranks)) #75.561181
+	print("other mean rank = %f" % np.mean(other_ranks)) #356.894024
+	print("all mean rank = %f" % np.mean(all_ranks)) #356.500000
+	print("parent mean sim = %f" % np.mean(parent_sim)) #0.495087
+	print("other mean sim = %f" % np.mean(other_sim)) #0.296818
+	print("all mean sim = %f" % np.mean(all_sim)) #0.297096
+
+
 def get_suggested_responses(query, model_name, model, pro_vecs, con_vecs, texts_pro, texts_con, responses, lowercase_to_uppercase, num_responses=5, classify_responses=True, responses_to_response=False, is_indexed=False, **kwargs):
 	pre_path = ""#"python/"
 	# import time
@@ -114,6 +172,7 @@ def get_suggested_responses(query, model_name, model, pro_vecs, con_vecs, texts_
 	distances_pro, distances_con, most_similar_pro, most_similar_con = [], [], [], []
 	query_text = query.lower()
 	query_vec = []
+	
 	if model_name == 'tfidf':
 		texts_pro.append(query_text)
 		texts_con.append(query_text)
@@ -129,8 +188,13 @@ def get_suggested_responses(query, model_name, model, pro_vecs, con_vecs, texts_
 			distances_pro, most_similar_pro = faiss_index.search(pro_vecs, query_vec, texts_pro, num_responses)
 			distances_con, most_similar_con = faiss_index.search(con_vecs, query_vec, texts_con, num_responses)
 		else:
-			distances_pro, most_similar_pro = utils.most_sim_cos(pro_vecs, query_vec, num_responses)
-			distances_con, most_similar_con = utils.most_sim_cos(con_vecs, query_vec, num_responses)
+			if model_name == 'sbert' and False: #add check encoder check instead of false
+				distances_pro, most_similar_pro = utils.get_sbert_mostsimilar_crossencoder(pro_vecs, query_text, query_vec, num_responses)
+				distances_con, most_similar_con = utils.get_sbert_mostsimilar_crossencoder(con_vecs, query_text, query_vec, num_responses)
+				print(distances_pro)
+			else:
+				distances_pro, most_similar_pro = utils.most_sim_cos(pro_vecs, query_vec, num_responses)
+				distances_con, most_similar_con = utils.most_sim_cos(con_vecs, query_vec, num_responses)
 	stances = ["pro"] * len(most_similar_pro)
 	stances.extend(["con"] * len(most_similar_con))
 	most_similar = most_similar_pro
@@ -198,16 +262,19 @@ def get_suggested_responses(query, model_name, model, pro_vecs, con_vecs, texts_
 
 if __name__ == "__main__":
 	model_name = "sbert"
-	query = "Veganism saves animal lives."
+	query = "Vaccination will help build herd immunity against the virus and save lives"
 	is_indexed = False
 	num_responses = 3
 	classify_responses = True
 	responses_to_response = False
-	topic = "veganism"
+	topic = "vaccination"
 
 	loaded_values = load(topic, model_name, is_indexed=is_indexed)
 	print("loaded")
-	x = get_suggested_responses(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
+	# x = get_suggested_responses(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
+	# loaded_values['texts_pro'], loaded_values['texts_con'], loaded_values['responses'], loaded_values['lowercase_to_uppercase'],
+	#  num_responses=num_responses, classify_responses=classify_responses, responses_to_response=responses_to_response, is_indexed=is_indexed)
+	calculate_parent_sim(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
 	loaded_values['texts_pro'], loaded_values['texts_con'], loaded_values['responses'], loaded_values['lowercase_to_uppercase'],
-	 num_responses=num_responses, classify_responses=classify_responses, responses_to_response=responses_to_response, is_indexed=is_indexed)
-	print(x) 
+	 num_responses=100, classify_responses=False, responses_to_response=responses_to_response, is_indexed=is_indexed)
+	# print(x) 
