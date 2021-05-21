@@ -7,7 +7,7 @@ from six.moves import cPickle
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import re
-import faiss_index
+#import faiss_index
 import collections
 np.random.seed(123)
 
@@ -262,7 +262,7 @@ def get_suggested_responses(query, model_name, model, pro_vecs, con_vecs, texts_
 
 if __name__ == "__main__":
 	model_name = "sbert"
-	query = "Vaccination will help build herd immunity against the virus and save lives"
+	query = "Vaccination will help build immunity against the virus and save lives."
 	is_indexed = False
 	num_responses = 3
 	classify_responses = True
@@ -271,10 +271,10 @@ if __name__ == "__main__":
 
 	loaded_values = load(topic, model_name, is_indexed=is_indexed)
 	print("loaded")
-	# x = get_suggested_responses(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
-	# loaded_values['texts_pro'], loaded_values['texts_con'], loaded_values['responses'], loaded_values['lowercase_to_uppercase'],
-	#  num_responses=num_responses, classify_responses=classify_responses, responses_to_response=responses_to_response, is_indexed=is_indexed)
-	calculate_parent_sim(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
+	x = get_suggested_responses(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
 	loaded_values['texts_pro'], loaded_values['texts_con'], loaded_values['responses'], loaded_values['lowercase_to_uppercase'],
-	 num_responses=100, classify_responses=False, responses_to_response=responses_to_response, is_indexed=is_indexed)
-	# print(x) 
+	 num_responses=num_responses, classify_responses=classify_responses, responses_to_response=responses_to_response, is_indexed=is_indexed)
+	# calculate_parent_sim(query, model_name, loaded_values['model'], loaded_values['pro_vecs'], loaded_values['con_vecs'],
+	# loaded_values['texts_pro'], loaded_values['texts_con'], loaded_values['responses'], loaded_values['lowercase_to_uppercase'],
+	#  num_responses=100, classify_responses=False, responses_to_response=responses_to_response, is_indexed=is_indexed)
+	print(x) 
